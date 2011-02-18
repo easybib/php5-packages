@@ -1,0 +1,21 @@
+Source: php5-easybib
+Maintainer: Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>
+Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libtidy-dev, , libxml2-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3 
+
+Package: php5-easybib
+Architecture: any
+Conflicts: php5
+Provides: php5
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), openssl, libtidy-0.99-0
+Description: server-side, HTML-embedded scripting language (FPM-CGI binary)
+ This package provides the Fast Process Manager interpreter that runs
+ as a daemon and receives Fast/CGI requests. 
+ This package is php-fpm in 'tills special flavour'.
+ PHP5 is an HTML-embedded scripting language. Much of its syntax is borrowed
+ from C, Java and Perl with a couple of unique PHP-specific features thrown
+ in. The goal of the language is to allow web developers to write dynamically
+ generated pages quickly. This version of PHP5 was built with the Suhosin patch.
