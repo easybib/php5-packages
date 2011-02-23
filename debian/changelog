@@ -1,3 +1,15 @@
+php5-easybib (5.3.5-0easybib4) karmic; urgency=low
+
+  * test rebuild
+
+  -- Till Klampaeckel <till@php.net>  Wed, 23 Feb 2011 18:58:01 +0100
+
+php5-easybib (5.3.5-0easybib3) karmic; urgency=low
+
+  * fixed dependency (for PDO)
+
+ -- Till Klampaeckel <till@php.net>   Wed, 23 Feb 2011 15:19:11 +0100
+
 php5-easybib (5.3.5-0easybib2) karmic; urgency=low
 
   * added PDO (mysql)
