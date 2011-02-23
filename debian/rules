@@ -27,10 +27,13 @@ PHP_EXTS=--enable-sockets\
   --with-mysqli=mysqlnd\
   --disable-posix\
   --disable-phar\
-  --disable-pdo\
   --enable-pcntl\
   --with-curl\
-  --with-tidy
+  --with-tidy \
+  --enable-pdo \
+  --with-pdo-mysql \
+  --without-pdo-sqlite \
+  --enable-mbstring
 PHP_FPM=--enable-fpm\
   --with-fpm-user=$(PHP_USER)\
   --with-fpm-group=$(PHP_GROUP)
