@@ -1,3 +1,10 @@
+php5-easybib (5.3.5-0easybib2) karmic; urgency=low
+
+  * added PDO (mysql)
+  * added mbstring
+
+ -- Till Klampaeckel <till@php.net>  Wed, 23 Feb 2011 13:44:22 +0100
+
 php5-easybib (5.3.5-0easybib1) karmic; urgency=low
 
   * Initial release
