@@ -8,7 +8,6 @@
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
-export DH_ALWAYS_EXCLUDE=.svn:.git:CVS
 
 PHP_USER=www-data
 PHP_GROUP=www-data
