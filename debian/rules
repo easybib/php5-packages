@@ -76,11 +76,15 @@ override_dh_auto_configure:
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(PHP_OPTS) $(PHP_EXTS) $(PHP_FPM)
 
 override_dh_auto_install:
-	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/php
-
+	ls -la $(CURDIR)/debian
+	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	ls -la $(CURDIR)/debian
 override_dh_auto_test:
 	#noop
 override_dh_usrlocal:
+	echo "X"
+	ls -la $(CURDIR)/debian/tmp/
+	echo "Y"
 	#noop
 
 %:

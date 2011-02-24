@@ -1,6 +1,6 @@
 Source: php5-easybib
 Maintainer: Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>
-Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libtidy-dev, , libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
+Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libtidy-dev, libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
 Homepage: http://www.php.net/
 Section: php
 Priority: optional
