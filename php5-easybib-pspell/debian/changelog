@@ -1,0 +1,5 @@
+php5-easybib-pspell (5.3.5-0easybib0) karmic; urgency=low
+
+  * initial release
+
+ -- Till Klampaeckel <till@php.net>  Thu, 24 Feb 2011 19:45:36 +0100
