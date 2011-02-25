@@ -1,3 +1,9 @@
+php5-easybib-pspell (5.3.5-0easybib1) karmic; urgency=low
+
+  * build without PEAR
+
+ -- Till Klampaeckel <till@php.net>  Thu, 24 Feb 2011 20:01:58 +0100
+
 php5-easybib-pspell (5.3.5-0easybib0) karmic; urgency=low
 
   * initial release
