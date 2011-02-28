@@ -62,9 +62,6 @@ override_dh_auto_install:
 override_dh_auto_test:
 	#noop
 override_dh_usrlocal:
-	echo "X"
-	ls -la $(CURDIR)/debian/tmp/
-	echo "Y"
 	#noop
 
 %:
