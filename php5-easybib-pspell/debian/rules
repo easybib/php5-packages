@@ -58,6 +58,7 @@ override_dh_auto_install:
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
 	cp modules/pspell.so $(CURDIR)/debian/$(EXTDIR)
 	ls -la $(CURDIR)/debian/$(EXTDIR)
+	echo "extension=pspell.so" > $(CURDIR)/deb/$(PHP_PREFIX)/etc/php/pspell.ini
 
 override_dh_auto_test:
 	#noop
