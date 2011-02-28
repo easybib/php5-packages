@@ -5,6 +5,7 @@ export DH_VERBOSE=1
 
 PHP_PREFIX=/usr/local
 EXTDIR = $(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626
+INIDIR = $(PHP_PREFIX)/etc/php
 
 PHP_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc\
   --with-config-file-scan-dir=$(PHP_PREFIX)/etc/php\
@@ -60,7 +61,8 @@ override_dh_auto_install:
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
 	cp modules/pspell.so $(CURDIR)/debian/php5-easybib-pspell/$(EXTDIR)
 	ls -la $(CURDIR)/debian/php5-easybib-pspell/$(EXTDIR)
-	echo "extension=pspell.so" > $(CURDIR)/debian/php5-easybib-pspell/$(PHP_PREFIX)/etc/php/pspell.ini
+    mkdir -p $(CURDIR)/debian/php5-easybib-pspell/$(INIDIR)
+	echo "extension=pspell.so" > $(CURDIR)/debian/php5-easybib-pspell/$(INIDIR)/pspell.ini
 
 override_dh_auto_test:
 	#noop
