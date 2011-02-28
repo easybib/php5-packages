@@ -1,10 +1,4 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
@@ -59,8 +53,12 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	ls -la $(CURDIR)/debian
-	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	ls -la $(CURDIR)/debian
+    EXTDIR="$(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626"
+    mkdir -p $(CURDIR)/debian/$(EXTDIR)
+	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+    cp modules/pspell.so $(CURDIR)/debian/$(EXTDIR)
+	ls -la $(CURDIR)/debian/$(EXTDIR)
+
 override_dh_auto_test:
 	#noop
 override_dh_usrlocal:
