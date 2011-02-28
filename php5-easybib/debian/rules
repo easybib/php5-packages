@@ -77,14 +77,11 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	ls -la $(CURDIR)/debian
-	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/php5-easybib
 	ls -la $(CURDIR)/debian
 override_dh_auto_test:
 	#noop
 override_dh_usrlocal:
-	echo "X"
-	ls -la $(CURDIR)/debian/tmp/
-	echo "Y"
 	#noop
 
 %:
