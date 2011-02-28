@@ -10,7 +10,7 @@ Package: php5-easybib
 Architecture: any
 Conflicts: php5
 Provides: php5
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), openssl, libtidy-0.99-0
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), openssl, libtidy-0.99-0, libcurl
 Description: server-side, HTML-embedded scripting language (FPM-CGI binary)
  This package provides the Fast Process Manager interpreter that runs
  as a daemon and receives Fast/CGI requests. 
