@@ -16,7 +16,7 @@ PHP_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc\
   --disable-short-tags
 
 PHP_EXTS=--disable-all\
-  --with-pspell=shared
+  --enable-pdo=shared
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -57,12 +57,12 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	ls -la $(CURDIR)/debian
-	mkdir -p $(CURDIR)/debian/php5-easybib-pspell/$(EXTDIR)
+	mkdir -p $(CURDIR)/debian/php5-easybib-pdo_sqlite/$(EXTDIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	cp modules/pspell.so $(CURDIR)/debian/php5-easybib-pspell/$(EXTDIR)
-	ls -la $(CURDIR)/debian/php5-easybib-pspell/$(EXTDIR)
-	mkdir -p $(CURDIR)/debian/php5-easybib-pspell/$(INIDIR)
-	echo "extension=pspell.so" > $(CURDIR)/debian/php5-easybib-pspell/$(INIDIR)/pspell.ini
+	cp modules/pdo.so $(CURDIR)/debian/php5-easybib-pdo_sqlite/$(EXTDIR)
+	ls -la $(CURDIR)/debian/php5-easybib-pdo_sqlite/$(EXTDIR)
+	mkdir -p $(CURDIR)/debian/php5-easybib-pdo_sqlite/$(INIDIR)
+	echo "extension=pdo.so" > $(CURDIR)/debian/php5-easybib-pdo_sqlite/$(INIDIR)/pdo.ini
 
 override_dh_auto_test:
 	#noop
