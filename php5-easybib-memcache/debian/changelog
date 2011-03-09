@@ -1,0 +1,5 @@
+php5-easybib-memcache (5.3.5-0easybib0) karmic; urgency=low
+
+  * initial release
+
+ --  Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 08 Mar 2011 19:49:43 +0100

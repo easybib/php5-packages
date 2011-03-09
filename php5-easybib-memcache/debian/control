@@ -1,0 +1,14 @@
+Source: php5-easybib-memcache
+Maintainer: Florian Holzhauer <fh-ubuntu@fholzhauer.de> 
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3 
+
+Package: php5-easybib-memcache
+Architecture: any
+Conflicts: php5-memcache
+Provides: php5-memcache
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib
+Description: This package provides ext/memcache.so - 2.2.6 stable
