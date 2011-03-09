@@ -1,0 +1,27 @@
+php5-easybib-pspell (5.3.5-0easybib4) karmic; urgency=low
+
+  * added ini file for php
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Mon, 28 Feb 2011 18:32:06 +0100
+php5-easybib-pspell (5.3.5-0easybib3) karmic; urgency=low
+
+  * now featuring pspell.so 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Mon, 28 Feb 2011 17:34:11 +0100
+php5-easybib-pspell (5.3.5-0easybib2) karmic; urgency=low
+
+  * trying to fix debian/rules
+
+ -- Till Klampaeckel <till@php.net>  Sun, 27 Feb 2011 16:17:19 +0100
+
+php5-easybib-pspell (5.3.5-0easybib1) karmic; urgency=low
+
+  * build without PEAR
+
+ -- Till Klampaeckel <till@php.net>  Thu, 24 Feb 2011 20:01:58 +0100
+
+php5-easybib-pspell (5.3.5-0easybib0) karmic; urgency=low
+
+  * initial release
+
+ -- Till Klampaeckel <till@php.net>  Thu, 24 Feb 2011 19:45:36 +0100
