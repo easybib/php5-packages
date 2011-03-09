@@ -1,0 +1,65 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+PHP_PREFIX=/usr/local
+EXTDIR=$(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626
+INIDIR=$(PHP_PREFIX)/etc/php
+
+CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
+
+DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_ARCH   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+
+
+COMMON_CONFIG=--build=$(DEB_BUILD_GNU_TYPE) \
+		--host=$(DEB_HOST_GNU_TYPE) 
+
+ifeq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+  CFLAGS += -O2
+else
+  CFLAGS += -O0
+endif
+CFLAGS += -Wall -fsigned-char -fno-strict-aliasing
+# LFS support
+ifneq (yes,$(PHP5_COMPAT))
+  CFLAGS += $(shell getconf LFS_CFLAGS)
+endif
+
+# Enable IEEE-conformant floating point math on alphas (not the default)
+ifeq (alpha-linux-gnu,$(DEB_HOST_GNU_TYPE))
+  CFLAGS += -mieee
+endif
+
+ifeq ($(DEB_HOST_GNU_TYPE), $(findstring $(DEB_HOST_GNU_TYPE), ia64-linux-gnu powerpc64-linux-gnu avr32-linux-gnu))
+  CFLAGS += -g
+else
+  CFLAGS += -gstabs
+endif
+
+MAKEFLAGS += -j2
+
+prefix=$(PHP_PREFIX)
+
+override_dh_auto_configure:
+	$(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config
+	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS)
+
+override_dh_auto_install:
+	ls -la $(CURDIR)/debian/php5-easybib-apc/
+	mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
+	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	cp modules/apc.so $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
+	ls -la $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
+	mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)
+	echo "extension=apc.so" > $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)/apc.ini
+
+override_dh_auto_test:
+	#noop
+override_dh_usrlocal:
+	#noop
+
+%:
+	dh $@
