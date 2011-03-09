@@ -1,13 +1,30 @@
+php5-easybib (5.3.5-0easybib9) karmic; urgency=low
+
+  * add libmysqlclient-dev, libxml2-dev as depends
+ -- Till Klampaeckel <till@php.net>  Mon, 28 Feb 2011 22:02:39 +0100
+
+php5-easybib (5.3.5-0easybib8) karmic; urgency=low
+
+  * build script is borked >:O
+ -- Till Klampaeckel <till@php.net>  Mon, 28 Feb 2011 19:42:34 +0100
+
+php5-easybib (5.3.5-0easybib7) karmic; urgency=low
+
+  * libcurl is required to run php :)
+ -- Till Klampaeckel <till@php.net>  Mon, 28 Feb 2011 17:47:46 +0100
+
 php5-easybib (5.3.5-0easybib6) karmic; urgency=low
 
   * Fixed buildpath, now even with binaries! =)
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Thu, 24 Feb 2011 09:42:41 +0100
+
 php5-easybib (5.3.5-0easybib5) karmic; urgency=low
 
   * Test again
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Thu, 24 Feb 2011 06:13:55 +0100
+
 php5-easybib (5.3.5-0easybib4) karmic; urgency=low
 
   * test rebuild of the .deb (previous build was broken)
