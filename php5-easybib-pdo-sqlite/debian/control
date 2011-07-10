@@ -1,0 +1,14 @@
+Source: php5-easybib-pdo-sqlite
+Maintainer: Florian Holzhauer <fh-ubuntu@fholzhauer.de> 
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib, libsqlite3-dev
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3 
+
+Package: php5-easybib-pdo-sqlite
+Architecture: any
+Conflicts: php5-pdo-sqlite
+Provides: php5-pdo-sqlite
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libsqlite3-dev 
+Description: This package provides ext/pdo-sqlite.so
