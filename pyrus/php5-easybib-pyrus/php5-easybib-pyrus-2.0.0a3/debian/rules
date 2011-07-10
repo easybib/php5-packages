@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+override_dh_auto_configure:
+	#noop
+
+override_dh_auto_install:
+	mkdir -p $(CURDIR)/debian/php5-easybib-pyrus/usr/share/pyrus
+	mkdir -p $(CURDIR)/debian/php5-easybib-pyrus/usr/bin
+	cp $(CURDIR)/usr/share/pyrus.phar $(CURDIR)/debian/php5-easybib-pyrus/usr/share/pyrus
+	cp $(CURDIR)/usr/bin/pyrus $(CURDIR)/debian/php5-easybib-pyrus/usr/bin/
+
+override_dh_auto_test:
+	#noop
+
+override_dh_usrlocal:
+	#noop
+
+%:
+	dh  $@
