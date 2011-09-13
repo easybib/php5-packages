@@ -1,3 +1,9 @@
+php5-easybib (5.3.8-0easybib0) lucid; urgency=low
+
+  * php 5.3.8 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 13 Sep 2011 21:09:12 +0200
+
 php5-easybib (5.3.5-0easybib9) karmic; urgency=low
 
   * add libmysqlclient-dev, libxml2-dev as depends
