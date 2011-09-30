@@ -1,0 +1,11 @@
+php5-easybib (5.3.8-0easybib1~karmicppa) karmic; urgency=low
+
+  * changed version of package to karmic 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 14:36:08 +0200
+
+php5-easybib (5.3.8-0easybib0) lucid; urgency=low
+
+  * php 5.3.8 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 13 Sep 2011 21:09:12 +0200
