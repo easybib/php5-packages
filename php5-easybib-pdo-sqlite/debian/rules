@@ -53,7 +53,7 @@ override_dh_auto_install:
 	cp modules/pdo_sqlite.so $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(EXTDIR)
 	ls -la $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(EXTDIR)
 	mkdir -p $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(INIDIR)
-	echo "extension=pdo_sqlite.so" > $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(INIDIR)/apc.ini
+	echo "extension=pdo_sqlite.so" > $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(INIDIR)/pdo-sqlite.ini
 
 override_dh_auto_test:
 	#noop
