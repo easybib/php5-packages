@@ -1,0 +1,5 @@
+php5-easybib-memcache (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * 5.3.8, memcache 3.0.6
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 15:29:58 +0200
