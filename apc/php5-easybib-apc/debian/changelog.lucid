@@ -1,0 +1,5 @@
+php5-easybib-apc (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * APC 3.1.9, now karmic and lucid releases 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 15:12:15 +0200

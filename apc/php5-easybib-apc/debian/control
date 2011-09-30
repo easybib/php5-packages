@@ -11,4 +11,4 @@ Architecture: any
 Conflicts: php5-apc
 Provides: php5-apc
 Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib
-Description: This package provides ext/apc.so - 3.1.7 beta
+Description: This package provides ext/apc.so - 3.1.9
