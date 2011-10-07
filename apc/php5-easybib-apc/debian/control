@@ -1,9 +1,9 @@
 Source: php5-easybib-apc
 Maintainer: Florian Holzhauer <fh-ubuntu@fholzhauer.de> 
 Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib
-Homepage: http://www.php.net/
 Section: php
 Priority: optional
+Homepage: http://pecl.php.net/package/APC
 Standards-Version: 3.8.3 
 
 Package: php5-easybib-apc
@@ -11,4 +11,11 @@ Architecture: any
 Conflicts: php5-apc
 Provides: php5-apc
 Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib
-Description: This package provides ext/apc.so - 3.1.9
+Description: APC (Alternative PHP Cache) module for PHP 5
+ Alternative PHP Cache
+ .
+ The Alternative PHP Cache, also known as APC, is a free, open, and robust
+ framework for caching and optimizing PHP intermediate code. APC is a fast
+ solution for caching PHP code locally, it is not distributed like MemcacheD,
+ but they can be used together for optimal caching.
+

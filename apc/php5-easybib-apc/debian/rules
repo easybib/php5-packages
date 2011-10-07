@@ -3,9 +3,16 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+PACKAGE_NAME=php5-easybib-apc
+PECL_PKG_NAME=apc
+PECL_PKG_REALNAME=APC
 PHP_PREFIX=/usr/local
-EXTDIR=$(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626
+PHPCONFIG=$(PHP_PREFIX)/bin/php-config
+PHPIZE=$(PHP_PREFIX)/bin/phpize
+EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
+SOURCE_DIR=$(shell echo $(PECL_PKG_REALNAME)-*)
+phpapiver=$(shell $(PHPCONFIG) --phpapi)
 
 CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
 
@@ -44,17 +51,37 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	$(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config
-	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS)
+	(cd $(SOURCE_DIR); \
+	$(PHPIZE) --with-php-config=$(PHP_CONFIG); \
+	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
 override_dh_auto_install:
-	ls -la $(CURDIR)/debian/php5-easybib-apc/
-	mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
+	(cd $(SOURCE_DIR); \
+	CFLAGS="$(CFLAGS)" $(MAKE); \
+	mkdir -p $(CURDIR)/debian/tmp/modules; \
+	cp modules/* $(CURDIR)/debian/tmp/modules; \
+	$(MAKE) clean)
+	touch $(SOURCE_DIR)/TODO
+	touch $(SOURCE_DIR)/CHANGELOG
+	touch build_stamp
+	#mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)
+	#echo "extension=apc.so" > $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)/apc.ini
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXT_DIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	cp modules/apc.so $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
-	ls -la $(CURDIR)/debian/php5-easybib-apc/$(EXTDIR)
-	mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)
-	echo "extension=apc.so" > $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)/apc.ini
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXT_DIR)/$(PECL_PKG_NAME).so
+	if [ -f "debian/$(PECL_PKG_NAME).ini" ]; then \
+		mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
+		cp debian/$(PECL_PKG_NAME).ini debian/$(PACKAGE_NAME)/$(INIDIR); \
+	fi
+
+clean:
+	dh_clean
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	rm -rf tmp
+	rm -rf debian/$(PACKAGE_NAME)
+
 
 override_dh_auto_test:
 	#noop
