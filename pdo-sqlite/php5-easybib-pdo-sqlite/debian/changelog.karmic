@@ -1,0 +1,11 @@
+php5-easybib-pdo-sqlite (5.3.8-0easybib0~karmicppa) lucid; urgency=low
+
+  * first version with php 5.3.8 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 07 Oct 2011 14:48:09 +0200
+
+php5-easybib-pdo-sqlite (5.3.5-0easybib0) karmic; urgency=low
+
+  * initial release
+
+ --  Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 08 Mar 2011 19:49:43 +0100
