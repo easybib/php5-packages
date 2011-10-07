@@ -3,11 +3,18 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+PACKAGE_NAME=php5-easybib-pdo-sqlite
 PHP_PREFIX=/usr/local
-EXTDIR=$(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626
+MODULE_NAME=pdo_sqlite
+SOURCE_DIR=.
+EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
 
-CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
+CONFIG_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc \
+	    --with-config-file-scan-dir=$(PHP_PREFIX)/etc/php \
+	    --prefix=$(PHP_PREFIX) \
+	    --disable-all --enable-pdo=shared \
+	    --with-sqlite3 --with-pdo-sqlite=shared
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -44,16 +51,29 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	$(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config
-	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS)
+	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) 
 
 override_dh_auto_install:
-	mkdir -p $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(EXTDIR)
-	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	cp modules/pdo_sqlite.so $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(EXTDIR)
-	ls -la $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(EXTDIR)
-	mkdir -p $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(INIDIR)
-	echo "extension=pdo_sqlite.so" > $(CURDIR)/debian/php5-easybib-pdo-sqlite/$(INIDIR)/apc.ini
+	(cd $(SOURCE_DIR); \
+	mkdir -p $(CURDIR)/debian/tmp/modules; \
+	ls -laR $(CURDIR)/modules/; \
+	cp $(CURDIR)/modules/* $(CURDIR)/debian/tmp/modules)
+	touch $(SOURCE_DIR)/TODO
+	touch $(SOURCE_DIR)/CHANGELOG
+	touch build_stamp
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXT_DIR)
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(MODULE_NAME).so debian/$(PACKAGE_NAME)/$(EXT_DIR)/$(MODULE_NAME).so
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(INIDIR)
+	echo "extension=$(MODULE_NAME).so" > $(CURDIR)/debian/$(PACKAGE_NAME)/$(INIDIR)/$(MODULE_NAME).ini
+
+clean:
+	dh_clean
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	rm -rf tmp
+	rm -rf debian/$(PACKAGE_NAME)
+
 
 override_dh_auto_test:
 	#noop
