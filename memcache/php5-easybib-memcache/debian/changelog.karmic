@@ -1,4 +1,10 @@
-php5-easybib-memcache (5.3.8-0easybib2~karmicppa) lucid; urgency=low
+php5-easybib-memcache (5.3.8-0easybib3~karmicppa) karmic; urgency=low
+
+  * version number bump for resubmission for launchpad 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 12:52:22 +0200
+
+php5-easybib-memcache (5.3.8-0easybib2~karmicppa) karmic; urgency=low
 
   * forgot ini file for module 
 
