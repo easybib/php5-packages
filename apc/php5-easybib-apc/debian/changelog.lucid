@@ -1,3 +1,9 @@
+php5-easybib-apc (5.3.8-0easybib5~lucidppa) lucid; urgency=low
+
+  * bumping version number to get launchpad going
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 12:49:18 +0200
+
 php5-easybib-apc (5.3.8-0easybib4~lucidppa) lucid; urgency=low
 
   * Forgot the ini file for the module 
