@@ -69,10 +69,8 @@ override_dh_auto_install:
 	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
 	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
-	if [ -f "debian/$(PECL_PKG_NAME).ini" ]; then \
-		mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
-		cp debian/$(PECL_PKG_NAME).ini debian/$(PACKAGE_NAME)/$(INIDIR); \
-	fi
+	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
+	echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
 
 clean:
 	dh_clean
