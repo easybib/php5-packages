@@ -7,7 +7,8 @@ PACKAGE_NAME=php5-easybib-pdo-sqlite
 PHP_PREFIX=/usr/local
 MODULE_NAME=pdo_sqlite
 SOURCE_DIR=.
-EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
+PHPCONFIG=$(PHP_PREFIX)/bin/php-config
+EXT_DIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
 
 CONFIG_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc \
