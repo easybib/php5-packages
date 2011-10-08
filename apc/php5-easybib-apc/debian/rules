@@ -66,9 +66,9 @@ override_dh_auto_install:
 	touch build_stamp
 	#mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)
 	#echo "extension=apc.so" > $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)/apc.ini
-	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXT_DIR)
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXT_DIR)/$(PECL_PKG_NAME).so
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
 	if [ -f "debian/$(PECL_PKG_NAME).ini" ]; then \
 		mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
 		cp debian/$(PECL_PKG_NAME).ini debian/$(PACKAGE_NAME)/$(INIDIR); \

@@ -1,16 +1,22 @@
-php5-easybib-apc (5.3.8-0easybib2~karmicppa) karmic; urgency=low
+php5-easybib-apc (5.3.8-0easybib3~karmicppa) karmic; urgency=low
+
+  * fixed path for .so
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 10:51:48 +0200
+
+php5-easybib-apc (5.3.8-0easybib2~lucidppa) lucid; urgency=low
 
   * Rewrote rules file, now compiles successfully local  
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 07 Oct 2011 13:54:15 +0200
 
-php5-easybib-apc (5.3.8-0easybib1~karmicppa) karmic; urgency=low
+php5-easybib-apc (5.3.8-0easybib1~lucidppa) lucid; urgency=low
 
   * now maybe with correct directory 
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 07 Oct 2011 13:54:08 +0200
 
-php5-easybib-apc (5.3.8-0easybib0~karmicppa) karmic; urgency=low
+php5-easybib-apc (5.3.8-0easybib0~lucidppa) lucid; urgency=low
 
   * APC 3.1.9, now karmic and lucid releases 
 
