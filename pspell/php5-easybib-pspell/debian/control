@@ -1,6 +1,6 @@
 Source: php5-easybib-pspell
 Maintainer: Till Klampaeckel <till@php.net>
-Build-Depends: libevent-dev, libpspell-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
+Build-Depends: php5-easybib, libevent-dev, libpspell-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
 Homepage: http://www.php.net/
 Section: php
 Priority: optional
