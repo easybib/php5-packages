@@ -65,8 +65,8 @@ override_dh_auto_install:
 	touch $(SOURCE_DIR)/TODO
 	touch $(SOURCE_DIR)/CHANGELOG
 	touch build_stamp
-	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXT_DIR)
-	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXT_DIR)/$(PECL_PKG_NAME).so
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
 	if [ -f "debian/$(PECL_PKG_NAME).ini" ]; then \
 		mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
 		cp debian/$(PECL_PKG_NAME).ini debian/$(PACKAGE_NAME)/$(INIDIR); \

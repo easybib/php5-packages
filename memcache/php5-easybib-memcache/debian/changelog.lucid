@@ -1,5 +1,17 @@
-php5-easybib-memcache (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+php5-easybib-memcache (5.3.8-0easybib1~lucidppa) lucid; urgency=low
 
-  * 5.3.8, memcache 3.0.6
+  * fixed path to module 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 10:56:58 +0200
+
+php5-easybib-memcache (5.3.8-0easybib0~karmicppa) karmic; urgency=low
+
+  * 5.3.8, memcache 3.0.6 
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 15:29:58 +0200
+
+php5-easybib-memcache (5.3.5-0easybib0) karmic; urgency=low
+
+  * initial release
+
+ --  Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 08 Mar 2011 19:49:43 +0100

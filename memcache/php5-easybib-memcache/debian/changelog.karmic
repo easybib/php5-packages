@@ -1,3 +1,9 @@
+php5-easybib-memcache (5.3.8-0easybib1~karmicppa) karmic; urgency=low
+
+  * fixed path to module 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 10:56:58 +0200
+
 php5-easybib-memcache (5.3.8-0easybib0~karmicppa) karmic; urgency=low
 
   * 5.3.8, memcache 3.0.6 
