@@ -1,3 +1,9 @@
+php5-easybib-xhprof (5.3.5.1-easybib1~lucidppa) lucid; urgency=low
+
+  * now separate karmic and lucid packages 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Sat, 08 Oct 2011 10:31:36 +0200
+
 php5-easybib-xhprof (5.3.5.1-easybib0) karmic; urgency=low
 
   * empty .orig.tar.gz sucks =) fixed.
