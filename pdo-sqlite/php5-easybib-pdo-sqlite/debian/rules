@@ -15,7 +15,8 @@ CONFIG_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc \
 	    --with-config-file-scan-dir=$(PHP_PREFIX)/etc/php \
 	    --prefix=$(PHP_PREFIX) \
 	    --disable-all --enable-pdo=shared \
-	    --with-sqlite3 --with-pdo-sqlite=shared
+	    --with-sqlite3=shared --with-pdo-sqlite=shared,/usr
+
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
