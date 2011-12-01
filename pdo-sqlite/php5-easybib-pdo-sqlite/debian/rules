@@ -17,7 +17,6 @@ CONFIG_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc \
 	    --disable-all --enable-pdo=shared \
 	    --with-sqlite3=shared --with-pdo-sqlite=shared,/usr
 
-
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_HOST_ARCH   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)

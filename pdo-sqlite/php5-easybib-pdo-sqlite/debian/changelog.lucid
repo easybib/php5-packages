@@ -1,3 +1,9 @@
+php5-easybib-pdo-sqlite (5.3.8-0easybib2~lucidppa) lucid; urgency=low
+
+  * Fixed configure according to tills mail 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Thu, 01 Dec 2011 16:50:06 +0100
+
 php5-easybib-pdo-sqlite (5.3.8-0easybib1~lucidppa) lucid; urgency=low
 
   * Fixed php extension dir, module should now be in correctpath 

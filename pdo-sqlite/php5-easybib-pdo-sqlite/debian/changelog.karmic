@@ -1,3 +1,9 @@
+php5-easybib-pdo-sqlite (5.3.8-0easybib2~karmicppa) lucid; urgency=low
+
+  * Fixed Configure string according to tills mail 
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Thu, 01 Dec 2011 16:44:34 +0100
+
 php5-easybib-pdo-sqlite (5.3.8-0easybib1~karmicppa) karmic; urgency=low
 
   * Fixed php extension dir, module should now be in correctpath 
