@@ -25,7 +25,6 @@ PHP_EXTS=--enable-sockets\
   --without-sqlite\
   --without-sqlite3\
   --with-mysqli=mysqlnd\
-  --disable-posix\
   --disable-phar\
   --enable-pcntl\
   --with-curl\
