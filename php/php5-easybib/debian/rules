@@ -21,7 +21,7 @@ PHP_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc\
 PHP_EXTS=--enable-sockets\
   --enable-soap\
   --with-openssl\
-  --disable-posix\
+  --enable-posix\
   --without-sqlite\
   --without-sqlite3\
   --with-mysqli=mysqlnd\
