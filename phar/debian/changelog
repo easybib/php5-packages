@@ -1,0 +1,5 @@
+php5-easybib-phar (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * new phar package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Mon, 04 Jun 2012 14:57:19 +0200
