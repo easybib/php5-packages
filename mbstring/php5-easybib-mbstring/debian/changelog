@@ -1,0 +1,5 @@
+php5-easybib-mbstring (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * new mbstring package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Mon, 04 Jun 2012 18:28:19 +0200
