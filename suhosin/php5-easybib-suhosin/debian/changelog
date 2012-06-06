@@ -1,0 +1,5 @@
+php5-easybib-suhosin (0.9.33-0easybib0~lucidppa) lucid; urgency=low
+
+  * new package for suhosin
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 06 Jun 2012 14:30:15 +0200
