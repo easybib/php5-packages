@@ -1,3 +1,9 @@
+php5-easybib-posix (5.3.8-0easybib1~lucidppa) lucid; urgency=low
+
+  * fixed problem with path
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 06 Jun 2012 19:05:19 +0200
+
 php5-easybib-posix (5.3.8-0easybib0~lucidppa) lucid; urgency=low
 
   * new posix package

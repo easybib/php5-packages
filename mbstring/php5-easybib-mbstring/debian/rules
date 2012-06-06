@@ -57,6 +57,8 @@ prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) 
+	chmod 0755 scripts/php-config
+	touch modules/foobar
 
 override_dh_auto_install:
 	(cd $(SOURCE_DIR); \

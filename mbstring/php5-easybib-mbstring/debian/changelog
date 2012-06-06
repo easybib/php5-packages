@@ -1,3 +1,9 @@
+php5-easybib-mbstring (5.3.8-0easybib3~lucidppa) lucid; urgency=low
+
+  * fixing path problem in package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 06 Jun 2012 18:14:19 +0200
+
 php5-easybib-mbstring (5.3.8-0easybib2~lucidppa) lucid; urgency=low
 
   * slightly newer mbstring package after changing compilation
