@@ -7,15 +7,14 @@ PACKAGE_NAME=php5-easybib-suhosin
 PECL_PKG_NAME=suhosin
 PECL_PKG_REALNAME=suhosin
 PHP_PREFIX=/usr/local
-PHP_PREFIX2=/usr
-PHPCONFIG=$(PHP_PREFIX2)/bin/php-config
-PHPIZE=$(PHP_PREFIX2)/bin/phpize
-EXTDIR=$(shell $(PHPCONFIG) --extension-dir | sed -e 's%^/usr/%/usr/local/%')
+PHPCONFIG=$(PHP_PREFIX)/bin/php-config
+PHPIZE=$(PHP_PREFIX)/bin/phpize
+EXTDIR=$(shell php -r 'echo ini_get("extension_dir");')
 INIDIR=$(PHP_PREFIX)/etc/php
 SOURCE_DIR=$(shell echo $(PECL_PKG_REALNAME)-*)
 phpapiver=$(shell $(PHPCONFIG) --phpapi)
 
-CONFIG_OPTS=--with-php-config=$(PHP_PREFIX2)/bin/php-config
+CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
