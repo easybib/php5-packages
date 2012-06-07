@@ -1,0 +1,15 @@
+Source: php5-easybib-suhosin
+Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper (>= 7.0.50~), php5-easybib
+Section: php
+Priority: optional
+Homepage: http://www.hardened-php.net/suhosin/download.html
+Standards-Version: 3.9.3
+
+Package: php5-easybib-suhosin
+Architecture: any
+Conflicts: php5-suhosin
+Provides: php5-suhosin
+Depends: ${shlibs:Depends}, ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib
+Description: advanced protection module for php5
+ This is Stefan Esser's advanced protection module for php5.
