@@ -1,14 +1,14 @@
 Source: php5-easybib-gearman
-Maintainer: Till Klampaeckel <till@php.net>
-Build-Depends: php5-easybib, libevent-dev, libpspell-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
-Homepage: http://www.php.net/
+Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
+Build-Depends: libtool, help2man, autoconf, automake, debhelper, php5-easybib, libgearman6, libevent-dev, uuid-dev
+Homepage: http://pecl.php.net/package/gearman
 Section: php
 Priority: optional
-Standards-Version: 3.8.3 
+Standards-Version: 3.8.3
 
 Package: php5-easybib-gearman
 Architecture: any
-Conflicts:
-Provides:
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), libpspell-dev
-Description: This package provides ext/gearman.so
+Conflicts: php5-gearman
+Provides: php5-gearman
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libgearman6, libevent-1.4-2
+Description: This package provides ext/gearman.so - 0.8.1

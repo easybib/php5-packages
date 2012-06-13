@@ -4,21 +4,18 @@
 export DH_VERBOSE=1
 
 PACKAGE_NAME=php5-easybib-gearman
+PECL_PKG_NAME=gearman
+#das hier ist der verzeichnisprefix im tarball
+PECL_PKG_REALNAME=gearman
 PHP_PREFIX=/usr/local
-MODULE_NAME=gearman
-SOURCE_DIR=.
 PHPCONFIG=$(PHP_PREFIX)/bin/php-config
-EXT_DIR=$(shell $(PHPCONFIG) --extension-dir)
+PHPIZE=$(PHP_PREFIX)/bin/phpize
+EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
+SOURCE_DIR=$(shell echo $(PECL_PKG_REALNAME)-*)
+phpapiver=$(shell $(PHPCONFIG) --phpapi)
 
-CONFIG_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc \
-	    --with-config-file-scan-dir=$(PHP_PREFIX)/etc/php \
-	    --prefix=$(PHP_PREFIX) \
-  	    --without-pear\
-  	    --disable-cgi\
-  	    --disable-ipv6\
-  	    --disable-short-tags \
-	    --disable-all
+CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -55,19 +52,19 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) 
+	(cd $(SOURCE_DIR); \
+	$(PHPIZE) --with-php-config=$(PHP_CONFIG); \
+	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
 override_dh_auto_install:
-	(cd $(SOURCE_DIR); \
+	(CFLAGS="$(CFLAGS)" $(MAKE); \
 	mkdir -p $(CURDIR)/debian/tmp/modules; \
-	cp $(CURDIR)/modules/* $(CURDIR)/debian/tmp/modules)
-	touch $(SOURCE_DIR)/TODO
-	touch $(SOURCE_DIR)/CHANGELOG
+	cp modules/* $(CURDIR)/debian/tmp/modules)
 	touch build_stamp
-	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXT_DIR)
-	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(MODULE_NAME).so debian/$(PACKAGE_NAME)/$(EXT_DIR)/$(MODULE_NAME).so
-	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(INIDIR)
-	echo "extension=$(MODULE_NAME).so" > $(CURDIR)/debian/$(PACKAGE_NAME)/$(INIDIR)/$(MODULE_NAME).ini
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
+	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
+        echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
 
 clean:
 	dh_clean
