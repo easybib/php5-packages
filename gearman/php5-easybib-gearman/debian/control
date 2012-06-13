@@ -1,0 +1,14 @@
+Source: php5-easybib-gearman
+Maintainer: Till Klampaeckel <till@php.net>
+Build-Depends: php5-easybib, libevent-dev, libpspell-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3 
+
+Package: php5-easybib-gearman
+Architecture: any
+Conflicts:
+Provides:
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), libpspell-dev
+Description: This package provides ext/gearman.so
