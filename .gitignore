@@ -3,3 +3,4 @@
 *.deb
 *.upload
 *.dsc
+.vagrant
