@@ -1,4 +1,4 @@
-php5-easybib-posix (5.3.8-0easybib1~lucidppa) lucid; urgency=low
+php5-easybib-posix (5.3.8-0easybib1~lucidppa) lucid; urgency=medium
 
   * fixed problem with path
 
