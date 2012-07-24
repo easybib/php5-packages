@@ -1,3 +1,9 @@
+php5-easybib-xhprof (5.3.15-1easybib2~karmicppa) karmic; urgency=medium
+
+  * recompiled it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 21:21:36 +0200
+
 php5-easybib-xhprof (5.3.5.1-easybib1~karmicppa) karmic; urgency=low
 
   * now separate karmic and lucid packages 
