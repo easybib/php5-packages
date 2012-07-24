@@ -44,14 +44,13 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	$(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config
-	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS)
+	(cd extension; $(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config; CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS); make)
 
 override_dh_auto_install:
 	ls -la $(CURDIR)/debian
 	mkdir -p $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	cp modules/xhprof.so $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
+	cp extension/modules/xhprof.so $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
 	ls -la $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
 	mkdir -p $(CURDIR)/debian/php5-easybib-xhprof/$(INIDIR)
 	echo "extension=xhprof.so" > $(CURDIR)/debian/php5-easybib-xhprof/$(INIDIR)/xhprof.ini
