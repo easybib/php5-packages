@@ -1,3 +1,21 @@
+php5-easybib (5.3.15-1easybib3~lucidppa) lucid; urgency=medium
+
+  * updated "docs" to remove "README.Zeus" as well
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 15:03:08 +0200
+
+php5-easybib (5.3.15-1easybib2~lucidppa) lucid; urgency=medium
+
+  * updated "docs" to refer to "README.GIT-RULES" instead of the removed "README.SVN-RULES"
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 14:42:08 +0200
+
+php5-easybib (5.3.15-1easybib1~lucidppa) lucid; urgency=medium
+
+  * updated to new upstream version
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 13:59:08 +0200
+
 php5-easybib (5.3.8-0easybib1~lucidppa) lucid; urgency=low
 
   * changed version of package to lucid

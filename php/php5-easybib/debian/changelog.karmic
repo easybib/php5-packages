@@ -1,11 +1,24 @@
+php5-easybib (5.3.15-1easybib3~karmicppa) karmic; urgency=medium
+
+  * updated "docs" to remove "README.Zeus" as well
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 15:33:08 +0200
+
+php5-easybib (5.3.15-1easybib2~karmicppa) karmic; urgency=medium
+
+  * updated "docs" to refer to "README.GIT-RULES" instead of the removed "README.SVN-RULES"
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 14:42:08 +0200
+
+php5-easybib (5.3.15-1easybib1~karmicppa) karmic; urgency=medium
+
+  * updated to new upstream version
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 13:59:08 +0200
+
 php5-easybib (5.3.8-0easybib1~karmicppa) karmic; urgency=low
 
-  * changed version of package to karmic 
+  * changed version of package to karmic
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 14:36:08 +0200
 
-php5-easybib (5.3.8-0easybib0) lucid; urgency=low
-
-  * php 5.3.8 
-
- -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Tue, 13 Sep 2011 21:09:12 +0200
