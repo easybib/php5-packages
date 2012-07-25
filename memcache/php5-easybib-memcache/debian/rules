@@ -6,7 +6,7 @@ export DH_VERBOSE=1
 PACKAGE_NAME=php5-easybib-memcache
 PECL_PKG_NAME=memcache
 #das hier ist der verzeichnisprefix im tarball
-PECL_PKG_REALNAME=memcache
+PECL_PKG_REALNAME=php5-easybib-memcache
 PHP_PREFIX=/usr/local
 PHPCONFIG=$(PHP_PREFIX)/bin/php-config
 PHPIZE=$(PHP_PREFIX)/bin/phpize
@@ -52,18 +52,15 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	(cd $(SOURCE_DIR); \
-	$(PHPIZE) --with-php-config=$(PHP_CONFIG); \
+	($(PHPIZE) --with-php-config=$(PHPCONFIG); \
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
 override_dh_auto_install:
-	(cd $(SOURCE_DIR); \
-	CFLAGS="$(CFLAGS)" $(MAKE); \
+	(CFLAGS="$(CFLAGS)" $(MAKE); \
 	mkdir -p $(CURDIR)/debian/tmp/modules; \
-	cp modules/* $(CURDIR)/debian/tmp/modules; \
-	$(MAKE) clean)
-	touch $(SOURCE_DIR)/TODO
-	touch $(SOURCE_DIR)/CHANGELOG
+	cp modules/* $(CURDIR)/debian/tmp/modules)
+	touch TODO
+	touch CHANGELOG
 	touch build_stamp
 	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
 	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so

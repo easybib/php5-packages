@@ -1,3 +1,33 @@
+php5-easybib-memcache (5.3.15-0easybib8~karmicppa) karmic; urgency=medium
+
+  * fixing the "rules" file even more..
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 16:50:22 +0200
+
+php5-easybib-memcache (5.3.15-0easybib7~karmicppa) karmic; urgency=medium
+
+  * fixing the "rules" file some more
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 16:37:22 +0200
+
+php5-easybib-memcache (5.3.15-0easybib6~karmicppa) karmic; urgency=medium
+
+  * fixing the "rules" file which didn't work on karmic
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 16:19:22 +0200
+
+php5-easybib-memcache (5.3.15-0easybib5~karmicppa) karmic; urgency=medium
+
+  * rerecompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 16:01:22 +0200
+
+php5-easybib-memcache (5.3.15-0easybib4~karmicppa) karmic; urgency=medium
+
+  * recompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 15:32:22 +0200
+
 php5-easybib-memcache (5.3.8-0easybib3~karmicppa) karmic; urgency=low
 
   * version number bump for resubmission for launchpad 

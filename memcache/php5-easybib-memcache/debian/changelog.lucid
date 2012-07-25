@@ -1,3 +1,15 @@
+php5-easybib-memcache (5.3.15-0easybib8~lucidppa) lucid; urgency=medium
+
+  * recompiled it after changing the "rules" file for karmic
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 17:02:22 +0200
+
+php5-easybib-memcache (5.3.15-0easybib4~lucidppa) lucid; urgency=medium
+
+  * recompiled it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 13:32:22 +0200
+
 php5-easybib-memcache (5.3.8-0easybib3~lucidppa) lucid; urgency=low
 
   * version number bump for resubmission for launchpad 
