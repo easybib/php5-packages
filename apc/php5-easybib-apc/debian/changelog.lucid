@@ -1,3 +1,15 @@
+php5-easybib-apc (5.3.15-0easybib8~lucidppa) lucid; urgency=medium
+
+  * fixed the "rules" file
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 17:58:18 +0200
+
+php5-easybib-apc (5.3.15-0easybib7~lucidppa) lucid; urgency=medium
+
+  * recompiled it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 17:34:18 +0200
+
 php5-easybib-apc (5.3.8-0easybib5~lucidppa) lucid; urgency=low
 
   * bumping version number to get launchpad going
