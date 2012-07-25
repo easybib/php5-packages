@@ -1,3 +1,9 @@
+php5-easybib-pdo-sqlite (5.3.15-0easybib4~lucidppa) lucid; urgency=medium
+
+  * Recompiled it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 21:38:36 +0100
+
 php5-easybib-pdo-sqlite (5.3.8-0easybib3~lucidppa) lucid; urgency=low
 
   * Fixed version number messup 
