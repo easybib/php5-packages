@@ -1,3 +1,9 @@
+php5-easybib-gearman (0.8.1.4-0easybib6~karmicppa) karmic; urgency=medium
+
+  * Recompile this once more with the new php5-easybib and gearmand-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Thu, 26 Jul 2012 19:04:22 +0000
+
 php5-easybib-gearman (0.8.1.4-0easybib5~karmicppa) karmic; urgency=medium
 
   * Recompile this once more with the new php5-easybib
