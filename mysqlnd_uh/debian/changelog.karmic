@@ -1,0 +1,6 @@
+php5-easybib-mysqlnd-uh (5.3.15b-0easybib1~karmicppa) karmic; urgency=medium
+
+  * new package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 11 Sep 2012 15:28:18 +0200
+
