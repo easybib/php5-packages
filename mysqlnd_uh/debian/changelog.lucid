@@ -1,3 +1,9 @@
+php5-easybib-mysqlnd-uh (5.3.15c-327819~lucidppa) lucid; urgency=medium
+
+  * use latest code from trunk with an important bug fix
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Thu, 27 Sep 2012 14:46:18 +0200
+
 php5-easybib-mysqlnd-uh (5.3.15b-0easybib1~lucidppa) lucid; urgency=medium
 
   * use code in trunk instead of the latest release
