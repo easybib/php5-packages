@@ -1,3 +1,16 @@
+php5-easybib (5.3.17-1easybib5~lucidppa) lucid; urgency=medium
+
+  * removed extra PEAR files in the package root
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 18:29:08 +0200
+
+php5-easybib (5.3.17-1easybib4~lucidppa) lucid; urgency=medium
+
+  * updated upstream version to 5.3.17
+  * applied important patch for bug 62886: PHP-FPM may segfault/hang on startup
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 14:46:08 +0200
+
 php5-easybib (5.3.15-1easybib3~lucidppa) lucid; urgency=medium
 
   * updated "docs" to remove "README.Zeus" as well
