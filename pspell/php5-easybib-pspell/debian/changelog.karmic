@@ -1,3 +1,9 @@
+php5-easybib-pspell (5.3.17-0easybib5~karmicppa) karmic; urgency=medium
+
+  * recompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 20:18:19 +0200
+
 php5-easybib-pspell (5.3.15-0easybib1~karmicppa) karmic; urgency=medium
 
   * recompiling it for the new php5-easybib
