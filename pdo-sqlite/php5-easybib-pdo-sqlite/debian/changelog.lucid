@@ -1,3 +1,9 @@
+php5-easybib-pdo-sqlite (5.3.17-0easybib5~lucidppa) lucid; urgency=medium
+
+  * Recompiled it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 19:28:36 +0100
+
 php5-easybib-pdo-sqlite (5.3.15-0easybib4~lucidppa) lucid; urgency=medium
 
   * Recompiled it for the new php5-easybib
