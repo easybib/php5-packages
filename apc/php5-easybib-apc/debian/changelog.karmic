@@ -1,3 +1,9 @@
+php5-easybib-apc (5.3.17-0easybib0~karmicppa) karmic; urgency=medium
+
+  * upgraded APC to version 3.1.13
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Mon, 29 Oct 2012 14:38:18 +0200
+
 php5-easybib-apc (5.3.15-0easybib8~karmicppa) karmic; urgency=medium
 
   * recompiled it for the new php5-easybib
@@ -39,3 +45,4 @@ php5-easybib-apc (5.3.8-0easybib0~karmicppa) karmic; urgency=low
   * APC 3.1.9, now karmic and lucid releases 
 
  -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 15:12:15 +0200
+
