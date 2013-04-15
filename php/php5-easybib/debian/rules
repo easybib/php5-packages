@@ -22,6 +22,7 @@ PHP_EXTS=--enable-sockets\
   --enable-soap\
   --with-openssl\
   --enable-posix\
+  --enable-bcmath\
   --without-sqlite\
   --without-sqlite3\
   --with-mysqli=mysqlnd\

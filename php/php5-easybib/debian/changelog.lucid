@@ -1,3 +1,21 @@
+php5-easybib (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * bumping version number to please the almighty launchpad troll
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
+php5-easybib (5.3.24-0easybib7~lucidppa) lucid; urgency=low
+
+  * bumping version number for --enable-bcmath
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:21:09 +0200
+
+php5-easybib (5.3.24-0easybib6~lucidppa) lucid; urgency=low
+
+  * updated upstream to 5.3.24 
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
+
 php5-easybib (5.3.17-1easybib5~lucidppa) lucid; urgency=medium
 
   * removed extra PEAR files in the package root

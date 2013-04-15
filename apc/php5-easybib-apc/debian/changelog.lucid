@@ -1,3 +1,9 @@
+php5-easybib-apc (5.3.24-0easybib6~lucidppa) lucid; urgency=low
+
+  * updated upstream to 5.3.24 
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
+
 php5-easybib-apc (5.3.17-0easybib0~lucidppa) lucid; urgency=medium
 
   * upgraded APC to version 3.1.13

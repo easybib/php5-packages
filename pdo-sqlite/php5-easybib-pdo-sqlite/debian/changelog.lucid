@@ -1,3 +1,9 @@
+php5-easybib-pdo-sqlite (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * updated to php 5.3.24
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
 php5-easybib-pdo-sqlite (5.3.17-0easybib5~lucidppa) lucid; urgency=medium
 
   * Recompiled it for the new php5-easybib

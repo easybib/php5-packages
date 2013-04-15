@@ -1,3 +1,9 @@
+php5-easybib-posix (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * updated to php 5.3.24
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
 php5-easybib-posix (5.3.15-0easybib2~lucidppa) lucid; urgency=medium
 
   * recompiling it for the new php5-easybib
