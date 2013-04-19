@@ -52,6 +52,8 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
+	ls -laR; \
+	mv memcache*/* . ; \
 	($(PHPIZE) --with-php-config=$(PHPCONFIG); \
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
