@@ -1,3 +1,9 @@
+php5-easybib (5.3.24-1easybib2~lucidppa) lucid; urgency=low
+
+  * forgot to add enchant deps to control
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 24 Apr 2013 14:23:09 +0200
+
 php5-easybib (5.3.24-1easybib1~lucidppa) lucid; urgency=low
 
   * added enchant
