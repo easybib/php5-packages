@@ -1,0 +1,41 @@
+php5-easybib-phar (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * updated to php 5.3.24
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
+php5-easybib-phar (5.3.17-0easybib5~lucidppa) lucid; urgency=medium
+
+  * recompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 20:00:00 +0200
+
+php5-easybib-phar (5.3.15-0easybib4~lucidppa) lucid; urgency=medium
+
+  * recompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 18:13:00 +0200
+
+php5-easybib-phar (5.3.8-0easybib3~lucidppa) lucid; urgency=low
+
+  * a little newer phar package after changing dput config :)
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 13:58:00 +0200
+
+php5-easybib-phar (5.3.8-0easybib2~lucidppa) lucid; urgency=low
+
+  * even newer phar package after changing dput config
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 13:29:00 +0200
+
+php5-easybib-phar (5.3.8-0easybib1~lucidppa) lucid; urgency=low
+
+  * newer phar package after signing code of conduct etc
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 13:04:00 +0200
+
+php5-easybib-phar (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * new phar package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Mon, 04 Jun 2012 14:57:19 +0200

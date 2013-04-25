@@ -1,0 +1,14 @@
+Source: php5-easybib-posix
+Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3
+
+Package: php5-easybib-posix
+Architecture: any
+Conflicts: php5-posix
+Provides: php5-posix
+Depends: ${misc:Depends}, sed (>= 4.1.1-1)
+Description: This package provides ext/posix.so

@@ -6,15 +6,22 @@
 # dh-make output file, you may use that output file without restriction.
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
+
+# TODO for new module:
+# add to modulelist
+# expand config string to enable shared
+
+
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
 PHP_USER=www-data
 PHP_GROUP=www-data
 PHP_PREFIX=/usr/local
+PHP_SCANDIR=$(PHP_PREFIX)/etc/php
 
 PHP_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc\
-  --with-config-file-scan-dir=$(PHP_PREFIX)/etc/php\
+  --with-config-file-scan-dir=$(PHP_SCANDIR)\
   --prefix=$(PHP_PREFIX)\
   --with-pear=$(PHP_PREFIX)/pear
 
@@ -24,16 +31,21 @@ PHP_EXTS=--enable-sockets\
   --enable-posix\
   --enable-bcmath\
   --without-sqlite\
-  --without-sqlite3\
   --with-mysqli=mysqlnd\
-  --disable-phar\
   --enable-pcntl\
   --with-curl\
   --with-tidy \
   --enable-pdo \
   --with-pdo-mysql \
   --without-pdo-sqlite \
-  --enable-mbstring
+  --enable-mbstring=shared \
+  --enable-phar=shared \
+  --enable-posix=shared \
+  --with-pspell=shared \
+  --with-sqlite3=shared \
+  --with-pdo-sqlite=shared \
+  --with-enchant=shared
+
 PHP_FPM=--enable-fpm\
   --with-fpm-user=$(PHP_USER)\
   --with-fpm-group=$(PHP_GROUP)
@@ -68,7 +80,7 @@ else
   CFLAGS += -gstabs
 endif
 
-MAKEFLAGS += -j2
+MAKEFLAGS += -j4
 
 prefix=$(PHP_PREFIX)
 
@@ -76,7 +88,31 @@ override_dh_auto_configure:
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(PHP_OPTS) $(PHP_EXTS) $(PHP_FPM)
 
 override_dh_auto_install:
-	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/php5-easybib; cd $(CURDIR)/debian/php5-easybib; rm -rf .channels .depdb .depdblock .filemap .lock .registry
+	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/php5-easybib; \
+	cd $(CURDIR)/debian/php5-easybib; \
+	rm -rf .channels .depdb .depdblock .filemap .lock .registry; \
+	ls -laR $(CURDIR)/debian; \
+	ext=`$(CURDIR)/debian/php5-easybib/usr/local/bin/php-config --extension-dir`; \
+	echo "PRE CAT CURDIR MODULELIST"; \
+	cat $(CURDIR)/debian/modulelist; \
+	cat $(CURDIR)/debian/modulelist | while read package extname dsoname priority; do \
+		echo "MODULELIST MODULE $${ext}" ;\
+		modulepath=$(CURDIR)/debian/php5-easybib/$${ext}; \
+		if [ -z "$$dsoname" ]; then dsoname=$$package; fi; \
+		if [ -n "$$priority" ]; then prepend="$${priority}-"; else prepend=""; fi; \
+		mkdir -p $(CURDIR)/debian/php5-easybib-$$package$${ext}; \
+		install -m 644 -o root -g root \
+			$${modulepath}/$$dsoname.so \
+			$(CURDIR)/debian/php5-easybib-$$package$${ext}/$$dsoname.so; \
+		ls -laR $(CURDIR)/debian/php5-easybib$${ext}; \
+		rm $(CURDIR)/debian/php5-easybib$${ext}/$$dsoname.*; \
+		mkdir -p $(CURDIR)/debian/php5-easybib-$$package/$(PHP_SCANDIR); \
+		sed -e"s/@extname@/$$extname/g; s/@dsoname@/$$dsoname/g" \
+		  < $(CURDIR)/debian/php5-module.ini \
+		  > $(CURDIR)/debian/php5-easybib-$${package}/$(PHP_SCANDIR)/$${prepend}$${dsoname}.ini; \
+	done
+	
+	
 
 override_dh_auto_test:
 	#noop

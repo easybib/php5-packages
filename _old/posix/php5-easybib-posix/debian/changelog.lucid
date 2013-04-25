@@ -1,0 +1,23 @@
+php5-easybib-posix (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * updated to php 5.3.24
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
+php5-easybib-posix (5.3.15-0easybib2~lucidppa) lucid; urgency=medium
+
+  * recompiling it for the new php5-easybib
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 18:17:19 +0200
+
+php5-easybib-posix (5.3.8-0easybib1~lucidppa) lucid; urgency=medium
+
+  * fixed problem with path
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 06 Jun 2012 19:05:19 +0200
+
+php5-easybib-posix (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * new posix package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 15:19:19 +0200

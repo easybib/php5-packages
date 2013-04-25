@@ -1,0 +1,14 @@
+This work was packaged for Debian by:
+
+    fh <fh-ubuntu@fholzhauer.de> on Wed, 16 Feb 2011 10:59:20 -0800
+
+It was downloaded from <http://www.php.net/get/php-5.3.5.tar.gz/from/www.php.net/mirror>
+
+License:
+
+    PHP 4 and PHP 5 are distributed under the PHP License v3.01, copyright (c) the PHP Group.     
+
+The Debian packaging is:
+
+    Copyright (C) 2011 fh <fh-ubuntu@fholzhauer.de>
+

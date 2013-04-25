@@ -1,0 +1,29 @@
+php5-easybib-mbstring (5.3.24-0easybib6~lucidppa) lucid; urgency=low
+
+  * updated upstream to 5.3.24 
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
+
+php5-easybib-mbstring (5.3.8-0easybib3~lucidppa) lucid; urgency=low
+
+  * fixing path problem in package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 06 Jun 2012 18:14:19 +0200
+
+php5-easybib-mbstring (5.3.8-0easybib2~lucidppa) lucid; urgency=low
+
+  * slightly newer mbstring package after changing compilation
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 14:09:19 +0200
+
+php5-easybib-mbstring (5.3.8-0easybib1~lucidppa) lucid; urgency=low
+
+  * newer mbstring package after signing code of conduct etc
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 05 Jun 2012 13:23:19 +0200
+
+php5-easybib-mbstring (5.3.8-0easybib0~lucidppa) lucid; urgency=low
+
+  * new mbstring package
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Mon, 04 Jun 2012 18:28:19 +0200

@@ -1,6 +1,6 @@
 Source: php5-easybib
 Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
-Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libtidy-dev, libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, quilt
+Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libpspell-dev, libtidy-dev, libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, quilt
 Homepage: http://www.php.net/
 Section: php
 Priority: optional
@@ -19,3 +19,52 @@ Description: server-side, HTML-embedded scripting language (FPM-CGI binary)
  from C, Java and Perl with a couple of unique PHP-specific features thrown
  in. The goal of the language is to allow web developers to write dynamically
  generated pages quickly. This version of PHP5 was built with the Suhosin patch.
+
+Package: php5-easybib-mbstring
+Architecture: any
+Conflicts: php5-mbstring
+Provides: php5-mbstring
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: mbstring
+
+Package: php5-easybib-enchant
+Architecture: any
+Conflicts: php5-enchant
+Provides: php5-enchant
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: enchant
+
+Package: php5-easybib-phar
+Architecture: any
+Conflicts: php5-phar
+Provides: php5-phar
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: phar
+
+Package: php5-easybib-posix
+Architecture: any
+Conflicts: php5-posix
+Provides: php5-posix
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: posix
+
+Package: php5-easybib-pspell
+Architecture: any
+Conflicts: php5-pspell
+Provides: php5-pspell
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: pspell
+
+Package: php5-easybib-pdo-sqlite
+Architecture: any
+Conflicts: php5-pdo-sqlite
+Provides: php5-pdo-sqlite
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: pdo-sqlite
+
+Package: php5-easybib-sqlite3
+Architecture: any
+Conflicts: php5-sqlite3
+Provides: php5-sqlite3
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: sqlite3

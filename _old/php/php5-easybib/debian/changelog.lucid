@@ -1,0 +1,55 @@
+php5-easybib (5.3.24-0easybib8~lucidppa) lucid; urgency=low
+
+  * bumping version number to please the almighty launchpad troll
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:22:09 +0200
+
+php5-easybib (5.3.24-0easybib7~lucidppa) lucid; urgency=low
+
+  * bumping version number for --enable-bcmath
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 14:21:09 +0200
+
+php5-easybib (5.3.24-0easybib6~lucidppa) lucid; urgency=low
+
+  * updated upstream to 5.3.24 
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
+
+php5-easybib (5.3.17-1easybib5~lucidppa) lucid; urgency=medium
+
+  * removed extra PEAR files in the package root
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 18:29:08 +0200
+
+php5-easybib (5.3.17-1easybib4~lucidppa) lucid; urgency=medium
+
+  * updated upstream version to 5.3.17
+  * applied important patch for bug 62886: PHP-FPM may segfault/hang on startup
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Fri, 28 Sep 2012 14:46:08 +0200
+
+php5-easybib (5.3.15-1easybib3~lucidppa) lucid; urgency=medium
+
+  * updated "docs" to remove "README.Zeus" as well
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 15:03:08 +0200
+
+php5-easybib (5.3.15-1easybib2~lucidppa) lucid; urgency=medium
+
+  * updated "docs" to refer to "README.GIT-RULES" instead of the removed "README.SVN-RULES"
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 14:42:08 +0200
+
+php5-easybib (5.3.15-1easybib1~lucidppa) lucid; urgency=medium
+
+  * updated to new upstream version
+
+ -- Ulf Härnhammar <ulfharn@gmail.com>  Tue, 24 Jul 2012 13:59:08 +0200
+
+php5-easybib (5.3.8-0easybib1~lucidppa) lucid; urgency=low
+
+  * changed version of package to lucid
+
+ -- Florian 'fh' Holzhauer <fh-ubuntu@fholzhauer.de>  Fri, 30 Sep 2011 14:36:08 +0200
+

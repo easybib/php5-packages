@@ -1,0 +1,25 @@
+This work was packaged for Debian by:
+
+    Ulf Härnhammar <ulfharn@gmail.com> on Tue, 05 Jun 2012 15:21:36 +0100
+
+It was downloaded from <http://www.php.net/get/php-5.3.5.tar.gz/from/www.php.net/mirror>
+
+License:
+
+    PHP 4 and PHP 5 are distributed under the PHP License v3.01, copyright (c) the PHP Group.     
+
+The Debian packaging is:
+
+    Copyright (C) 2012 Ulf Härnhammar <ulfharn@gmail.com>
+
+# Please chose a license for your packaging work. If the program you package
+# uses a mainstream license, using the same license is the safest choice.
+# Please avoid to pick license terms that are more restrictive than the
+# packaged work, as it may make Debian's contributions unacceptable upstream.
+# If you just want it to be GPL version 3, leave the following lines in.
+
+and is licensed under the GPL version 3, 
+see `/usr/share/common-licenses/GPL-3'.
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.

@@ -1,0 +1,7 @@
+enchant
+mbstring
+phar
+posix
+pspell
+pdo_sqlite
+sqlite3
