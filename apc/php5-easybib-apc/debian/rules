@@ -51,10 +51,12 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
+	cd APC*; \
 	($(PHPIZE) --with-php-config=$(PHPCONFIG); \
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
 override_dh_auto_install:
+	cd APC*; \
 	(CFLAGS="$(CFLAGS)" $(MAKE); \
 	mkdir -p $(CURDIR)/debian/tmp/modules; \
 	cp modules/* $(CURDIR)/debian/tmp/modules)
