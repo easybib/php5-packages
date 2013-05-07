@@ -3,11 +3,20 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
+PACKAGE_NAME=php5-easybib-xhprof
+PECL_PKG_NAME=xhprof
+#das hier ist der verzeichnisprefix im tarball
+PECL_PKG_REALNAME=xhprof
 PHP_PREFIX=/usr/local
-EXTDIR=$(PHP_PREFIX)/lib/php/extensions/no-debug-non-zts-20090626
+PHPCONFIG=$(PHP_PREFIX)/bin/php-config
+PHPIZE=$(PHP_PREFIX)/bin/phpize
+EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
+SOURCE_DIR=$(shell echo $(PECL_PKG_REALNAME)-*)/extension
 
-CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
+phpapiver=$(shell $(PHPCONFIG) --phpapi)
+
+CONFIG_OPTS=--with-php-config=$(PHPCONFIG)
 
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -44,16 +53,20 @@ MAKEFLAGS += -j2
 prefix=$(PHP_PREFIX)
 
 override_dh_auto_configure:
-	(cd extension; $(PHP_PREFIX)/bin/phpize --with-php-config=$(PHP_PREFIX)/bin/php-config; CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS); make)
+	(cd $(SOURCE_DIR); \
+	$(PHPIZE) --with-php-config=$(PHP_CONFIG); \
+	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS))
 
 override_dh_auto_install:
-	ls -la $(CURDIR)/debian
-	mkdir -p $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
-	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	cp extension/modules/xhprof.so $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
-	ls -la $(CURDIR)/debian/php5-easybib-xhprof/$(EXTDIR)
-	mkdir -p $(CURDIR)/debian/php5-easybib-xhprof/$(INIDIR)
-	echo "extension=xhprof.so" > $(CURDIR)/debian/php5-easybib-xhprof/$(INIDIR)/xhprof.ini
+	(cd $(SOURCE_DIR); \
+	CFLAGS="$(CFLAGS)" $(MAKE); \
+	mkdir -p $(CURDIR)/debian/tmp/modules; \
+	cp modules/* $(CURDIR)/debian/tmp/modules)
+	touch build_stamp
+	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
+	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
+	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
+        echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
 
 override_dh_auto_test:
 	#noop
