@@ -57,7 +57,9 @@ override_dh_auto_configure:
 	CFLAGS="$(CFLAGS)" ./configure $(COMMON_CONFIG) $(CONFIG_OPTS) )
 
 override_dh_auto_install:
-	(CFLAGS="$(CFLAGS)" $(MAKE); \
+	(cd $(SOURCE_DIR); \
+	CFLAGS="$(CFLAGS)" $(MAKE); \
+	ls -laR; \
 	mkdir -p $(CURDIR)/debian/tmp/modules; \
 	cp modules/* $(CURDIR)/debian/tmp/modules)
 	touch build_stamp

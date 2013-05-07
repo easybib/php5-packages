@@ -1,3 +1,10 @@
+php5-easybib-gearman (1.0.2-0easybib0~lucidppa) lucid; urgency=low
+
+  * updated upstream to 5.3.24
+  * fixed version number of package, apparently it was already 1.0.2 (at least same md5sum of tarball)
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
+
 php5-easybib-gearman (0.8.1.4-0easybib5~lucidppa) lucid; urgency=medium
 
   * Recompile this once more with the new php5-easybib
