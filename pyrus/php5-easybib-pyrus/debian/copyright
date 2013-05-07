@@ -1,0 +1,16 @@
+This work was packaged for Debian by:
+
+    Till Klampaeckel <till@php.net> on Sun, 10 Jul 2011 15:05:00 +0100
+
+It was downloaded from <http://pear2.php.net/>
+
+License:
+
+    Pyrus is distributed under the New BSD License
+
+The Debian packaging is:
+
+    Copyright (C) 2011 Till Klampaeckel <till@php.net>
+
+and is licensed under the The BSD License, 
+see `/usr/share/common-licenses/BSD'.
