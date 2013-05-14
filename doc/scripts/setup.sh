@@ -7,7 +7,7 @@ apt-get update -y
 apt-get install -y python-software-properties
 add-apt-repository ppa:easybib/ppa
 add-apt-repository ppa:easybib/test
-apt-get install -y build-essential devscripts ubuntu-dev-tools debhelper dh-make diff patch cdbs quilt gnupg fakeroot lintian pbuilder piuparts 
+apt-get install -y build-essential devscripts ubuntu-dev-tools debhelper dh-make diff patch cdbs quilt gnupg fakeroot lintian pbuilder piuparts ccache 
 apt-get install -y git-core gnupg vim
 
 ####begin pbuilderrc
@@ -25,10 +25,7 @@ UBUNTU_MIRROR="de.archive.ubuntu.com"
 NAME="$DIST"
 #include easybib-ppa in mirrors list to build with dependencies to php5-easybib packages
 OTHERMIRROR="deb http://ppa.launchpad.net/easybib/test/ubuntu $DIST main"
-
-NAME="$DIST"
-#include easybib-ppa in mirrors list to build with dependencies to php5-easybib packages
-OTHERMIRROR="deb http://ppa.launchpad.net/easybib/ppa/ubuntu $DIST main"
+# OTHERMIRROR="deb http://ppa.launchpad.net/easybib/ppa/ubuntu $DIST main"
 
 if [ -n "${ARCH}" ]; then
     NAME="$NAME-$ARCH"
@@ -54,7 +51,6 @@ EOF
 ##############
 ##end pbuilderrc
 ##############
-sudo -u vagrant
 
 mkdir -p /home/vagrant/pbuilder/build
 mkdir -p /home/vagrant/pbuilder/lucid-i386
@@ -62,5 +58,8 @@ mkdir -p /home/vagrant/pbuilder/lucid-amd64
 
 chown -R vagrant /home/vagrant/pbuilder
 
-su -c "sudo pbuilder create" vagrant
-su -c "ARCH=i386 sudo pbuilder create" vagrant 
+su -c "mkdir ~/.gnupg && cp /packaging/doc/gnupg/* ~/.gnupg" vagrant 
+
+echo " *********************************************** "
+echo " * Do not forget to run 'sudo pbuilder create' for all ARCH and DIST you want to use with pdebuild"
+echo " * e.g. 'DIST=precise ARCH=i386 sudo pbuilder create'"
