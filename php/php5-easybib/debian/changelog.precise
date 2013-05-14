@@ -1,0 +1,6 @@
+php5-easybib (5.3.24-1easybib2~preciseppa) precise; urgency=low
+
+  * forgot to add enchant deps to control
+  * hello precise
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 08 May 2013 07:00:09 +0200

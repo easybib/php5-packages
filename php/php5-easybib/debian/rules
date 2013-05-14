@@ -17,7 +17,7 @@ export DH_VERBOSE=1
 
 PHP_USER=www-data
 PHP_GROUP=www-data
-PHP_PREFIX=/usr/local
+PHP_PREFIX=/opt/easybib
 PHP_SCANDIR=$(PHP_PREFIX)/etc/php
 
 PHP_OPTS=--with-config-file-path=$(PHP_PREFIX)/etc\
@@ -91,25 +91,22 @@ override_dh_auto_install:
 	CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/php5-easybib; \
 	cd $(CURDIR)/debian/php5-easybib; \
 	rm -rf .channels .depdb .depdblock .filemap .lock .registry; \
-	ls -laR $(CURDIR)/debian; \
-	ext=`$(CURDIR)/debian/php5-easybib/usr/local/bin/php-config --extension-dir`; \
-	echo "PRE CAT CURDIR MODULELIST"; \
-	cat $(CURDIR)/debian/modulelist; \
+	ext=`$(CURDIR)/debian/php5-easybib/$(PHP_PREFIX)/bin/php-config --extension-dir`; \
 	cat $(CURDIR)/debian/modulelist | while read package extname dsoname priority; do \
-		echo "MODULELIST MODULE $${ext}" ;\
-		modulepath=$(CURDIR)/debian/php5-easybib/$${ext}; \
+		echo "MODULELIST MODULE $$ext" ;\
+		modulepath=$(CURDIR)/debian/php5-easybib/$$ext; \
 		if [ -z "$$dsoname" ]; then dsoname=$$package; fi; \
-		if [ -n "$$priority" ]; then prepend="$${priority}-"; else prepend=""; fi; \
-		mkdir -p $(CURDIR)/debian/php5-easybib-$$package$${ext}; \
+		if [ -n "$$priority" ]; then prepend="$$priority-"; else prepend=""; fi; \
+		mkdir -p $(CURDIR)/debian/php5-easybib-$$package$$ext; \
 		install -m 644 -o root -g root \
-			$${modulepath}/$$dsoname.so \
-			$(CURDIR)/debian/php5-easybib-$$package$${ext}/$$dsoname.so; \
-		ls -laR $(CURDIR)/debian/php5-easybib$${ext}; \
-		rm $(CURDIR)/debian/php5-easybib$${ext}/$$dsoname.*; \
+			$$modulepath/$$dsoname.so \
+			$(CURDIR)/debian/php5-easybib-$$package$$ext/$$dsoname.so; \
+		ls -laR $(CURDIR)/debian/php5-easybib$$ext; \
+		rm $(CURDIR)/debian/php5-easybib$$ext/$$dsoname.*; \
 		mkdir -p $(CURDIR)/debian/php5-easybib-$$package/$(PHP_SCANDIR); \
 		sed -e"s/@extname@/$$extname/g; s/@dsoname@/$$dsoname/g" \
 		  < $(CURDIR)/debian/php5-module.ini \
-		  > $(CURDIR)/debian/php5-easybib-$${package}/$(PHP_SCANDIR)/$${prepend}$${dsoname}.ini; \
+		  > $(CURDIR)/debian/php5-easybib-$$package/$(PHP_SCANDIR)/$$prepend$$dsoname.ini; \
 	done
 	
 	
