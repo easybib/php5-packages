@@ -1,3 +1,6 @@
+*.debian.tar.gz
+*.diff.gz
+changelog
 *.build
 *.changes
 *.deb

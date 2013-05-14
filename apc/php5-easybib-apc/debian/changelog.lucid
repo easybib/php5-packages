@@ -1,4 +1,4 @@
-php5-easybib-apc (5.3.24-0easybib0~lucidppa) lucid; urgency=low
+php5-easybib-apc (3.1.9-0easybib0~lucidppa) lucid; urgency=low
 
   * upstream 5.3.24
   * apc 3.1.9
