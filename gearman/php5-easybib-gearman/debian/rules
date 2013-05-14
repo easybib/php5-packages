@@ -7,7 +7,7 @@ PACKAGE_NAME=php5-easybib-gearman
 PECL_PKG_NAME=gearman
 #das hier ist der verzeichnisprefix im tarball
 PECL_PKG_REALNAME=gearman
-PHP_PREFIX=/usr/local
+PHP_PREFIX=/opt/easybib
 PHPCONFIG=$(PHP_PREFIX)/bin/php-config
 PHPIZE=$(PHP_PREFIX)/bin/phpize
 EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
