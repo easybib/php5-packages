@@ -54,13 +54,16 @@ has been changed:
 
 **Every time:**
 
--   download php-source, rename to php5-easybib\_$version.orig.tar.gz
+-   download php-source, rename to php5-easybib_$version.orig.tar.gz
 -   cd php5-easybib
 -   adjust debian/changelog
--   sudo DIST=precise ARCH=amd64 pdebuild \#local testing
+    - copy changelog.$DISTNAME to changelog
+    - add new entry with new version number
+-   sudo DIST=precise ARCH=amd64 pdebuild #local testing
 -   debuild -S -sa 
 -   dput -fd ppa:easybib/test
-    ../php5-easybib\_$longversion\_source.changes
+    ../php5-easybib_$longversion_source.changes
+-   move changelog back to changelog.$DISTNAME 
 
 Done :)
 
