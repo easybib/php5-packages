@@ -73,4 +73,4 @@ su -c "mkdir ~/.gnupg && cp /packaging/doc/gnupg/* ~/.gnupg" vagrant
 
 echo " *********************************************** "
 echo " * Do not forget to run 'sudo pbuilder create' for all ARCH and DIST you want to use with pdebuild"
-echo " * e.g. 'DIST=precise ARCH=i386 sudo pbuilder create'"
+echo " * e.g. 'sudo DIST=precise ARCH=i386 pbuilder create'"
