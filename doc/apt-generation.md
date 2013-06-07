@@ -160,3 +160,12 @@ true
     \#export CCACHE\_PREFIX="distcc"
 
 fi
+
+##Hints
+
+* Update pbuilder package config (run it after you modified ~/.pbuilderrc): sudo pbuilder update --override-config
+* Enter build image (handle with care when using param save-after-login):  sudo pbuilder --login --save-after-login
+* pdebuilder sometimes fails building the packages locally because of an unknown key for the easybib-ppa (usually complaining about an unavailable gpg key for php5-easybib). To fix this: 
+  * sudo pbuilder --login --save-after-login
+  * apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 540810F766E3A9B7
+
