@@ -1,5 +1,5 @@
 Source: php5-easybib-intl
-Maintainer: Till Klampaeckel <till@php.net
+Maintainer: Till Klampaeckel <till@php.net>
 Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib, libicu-dev
 Section: php
 Priority: optional
