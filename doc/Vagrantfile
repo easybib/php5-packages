@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  config.vm.box = "precise64"
+  config.vm.box = "precise"
   config.vm.box_url = "http://dl.dropbox.com/u/1537815/precise64.box"
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
@@ -10,6 +10,6 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell, :path => "./scripts/setup.sh"
   
 #  config.vm.share_folder("v-gnupg", "/home/vagrant/.gnupg", "./gnupg", :nfs => false)
-  config.vm.share_folder("v-root", "/packaging", "..", :nfs => false)
+  config.vm.share_folder("vagrant-root", "/packaging", "..", :nfs => false)
   
 end
