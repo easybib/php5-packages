@@ -35,7 +35,7 @@ UBUNTU_MIRROR="de.archive.ubuntu.com"
 
 NAME="$DIST"
 #include easybib-ppa in mirrors list to build with dependencies to php5-easybib packages
-OTHERMIRROR="deb http://ppa.launchpad.net/easybib/test/ubuntu $DIST main"
+OTHERMIRROR="deb [trusted=yes] http://ppa.launchpad.net/easybib/test-opt/ubuntu $DIST main"
 # OTHERMIRROR="deb http://ppa.launchpad.net/easybib/ppa/ubuntu $DIST main"
 
 if [ -n "${ARCH}" ]; then
@@ -48,8 +48,7 @@ DISTRIBUTION="$DIST"
 BUILDRESULT="$HOME/pbuilder/$NAME/result/"
 APTCACHE="$HOME/pbuilder/$NAME/aptcache/"
 BUILDPLACE="$HOME/pbuilder/build/"
-
-echo $BASETGZ
+HOOKDIR="$HOME/pbuilder/hooks/"
 
 if $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
     MIRRORSITE="http://$UBUNTU_MIRROR/ubuntu/"
@@ -62,6 +61,16 @@ EOF
 ##############
 ##end pbuilderrc
 ##############
+
+mkdir -p /home/vagrant/pbuilder/hooks
+
+cat << 'EOF' >/home/vagrant/pbuilder/hooks/D05deps
+#!/bin/sh
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 540810F766E3A9B7
+apt-get update
+EOF
+
+chmod a+x /home/vagrant/pbuilder/hooks/D05deps
 
 mkdir -p /home/vagrant/pbuilder/build
 mkdir -p /home/vagrant/pbuilder/lucid-i386
