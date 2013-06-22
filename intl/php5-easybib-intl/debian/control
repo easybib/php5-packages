@@ -1,6 +1,6 @@
 Source: php5-easybib-intl
-Maintainer: Till Klampaeckel <till@php.net>
-Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib
+Maintainer: Till Klampaeckel <till@php.net
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib, libicu-dev
 Section: php
 Priority: optional
 Homepage: http://pecl.php.net/package/intl
@@ -10,5 +10,5 @@ Package: php5-easybib-intl
 Architecture: any
 Conflicts: php5-intl
 Provides: php5-intl
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu48
 Description: ext/intl
