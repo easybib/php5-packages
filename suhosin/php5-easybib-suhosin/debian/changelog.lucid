@@ -1,3 +1,9 @@
+php5-easybib-suhosin (0.9.33-0easybib7~lucidppa) lucid; urgency=low
+
+  * fixing php prefix, module was in wrong path
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 26 Jun 2013 14:23:09 +0200
+
 php5-easybib-suhosin (0.9.33-0easybib6~lucidppa) lucid; urgency=low
 
   * recompile for php5-easybib 5.3.24
