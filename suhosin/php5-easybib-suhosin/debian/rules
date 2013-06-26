@@ -9,7 +9,7 @@ PECL_PKG_REALNAME=suhosin
 PHP_PREFIX=/opt/easybib
 PHPCONFIG=$(PHP_PREFIX)/bin/php-config
 PHPIZE=$(PHP_PREFIX)/bin/phpize
-EXTDIR=$(shell php -r 'echo ini_get("extension_dir");')
+EXTDIR=$(shell $(PHPCONFIG) --extension-dir)
 INIDIR=$(PHP_PREFIX)/etc/php
 SOURCE_DIR=$(shell echo $(PECL_PKG_REALNAME)-*)
 phpapiver=$(shell $(PHPCONFIG) --phpapi)
@@ -19,7 +19,6 @@ CONFIG_OPTS=--with-php-config=$(PHP_PREFIX)/bin/php-config
 DEB_HOST_GNU_TYPE    ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_HOST_ARCH   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
-
 
 COMMON_CONFIG=--build=$(DEB_BUILD_GNU_TYPE) \
 		--host=$(DEB_HOST_GNU_TYPE)
@@ -58,13 +57,10 @@ override_dh_auto_install:
 	( CFLAGS="$(CFLAGS)" $(MAKE); \
 	mkdir -p $(CURDIR)/debian/tmp/modules; \
 	cp modules/* $(CURDIR)/debian/tmp/modules )
-#; \
-#	$(MAKE) clean)
-#	touch $(SOURCE_DIR)/TODO
-#	touch $(SOURCE_DIR)/CHANGELOG
 	touch build_stamp
 	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
 	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	echo $(EXTDIR)
 	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
 	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
 	echo "extension=$(PECL_PKG_NAME).so"              > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
