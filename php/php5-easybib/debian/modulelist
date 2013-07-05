@@ -3,5 +3,5 @@ mbstring
 phar
 posix
 pspell
-pdo_sqlite
+pdo-sqlite pdo_sqlite pdo_sqlite
 sqlite3
