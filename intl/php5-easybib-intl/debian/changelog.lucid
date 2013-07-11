@@ -1,3 +1,9 @@
+php5-easybib-intl (3.0.0-0easybib1~lucidppa) lucid; urgency=low
+
+  * fixed dependencies for lucid
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 11 Jul 2013 09:15:00 +0200
+
 php5-easybib-intl (3.0.0-0easybib0~lucidppa) lucid; urgency=low
 
   * hello lucid
