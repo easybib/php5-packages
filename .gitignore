@@ -6,4 +6,4 @@ changelog
 *.deb
 *.upload
 *.dsc
-.vagrant
+doc/.vagrant*
