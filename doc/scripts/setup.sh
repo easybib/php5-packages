@@ -28,8 +28,8 @@ AUTO_DEBSIGN=yes
 UBUNTU_SUITES=("precise" "maverick" "lucid" "karmic" "jaunty" "hardy")
 UBUNTU_MIRROR="de.archive.ubuntu.com"
 
-# lucid wählen falls keine Angabe verwendet wird
-: ${DIST:="lucid"}
+# precise falls keine Angabe verwendet wird
+: ${DIST:="precise"}
 # Architektur amd64 setzen, falls keine angegeben ist
 : ${ARCH:="amd64"}
 

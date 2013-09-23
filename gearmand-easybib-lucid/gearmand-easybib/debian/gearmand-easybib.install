@@ -1,0 +1,5 @@
+opt/gearman/sbin/*
+opt/gearman/bin/*
+opt/gearman/lib/*
+opt/gearman/include/*
+opt/gearman/share/*
