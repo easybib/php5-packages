@@ -1,3 +1,9 @@
+gearmand-easybib (1.1.9-0easybib1~preciseppa) precise; urgency=high
+
+  * fixed dependencies
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Tue, 24 Sep 2013 10:11:12 +0200
+
 gearmand-easybib (1.1.9-0easybib0~preciseppa) precise; urgency=low
 
   * first version of easybib 1.1.9

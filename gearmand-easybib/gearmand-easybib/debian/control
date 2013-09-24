@@ -8,7 +8,7 @@ Homepage: http://gearman.org/
 
 Package: gearmand-easybib
 Architecture: any
-Depends: libgearman6-easybib (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: gearmand, gearman-job-server, libgearman4, libgearman6, libgearman7
 Provides: gearmand, gearman-job-server, libgearman4, libgearman6, libgearman7
 Pre-Depends: adduser
