@@ -1,5 +1,0 @@
-php5-easybib-suhosin (0.9.33-0easybib5~karmicppa) karmic; urgency=medium
-
-  * recompiled it for the new php5-easybib
-
- -- Ulf Härnhammar <ulfharn@gmail.com>  Wed, 25 Jul 2012 16:25:15 +0200

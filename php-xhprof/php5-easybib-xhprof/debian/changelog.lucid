@@ -1,6 +1,0 @@
-php5-easybib-xhprof (0.9.2-0easybib0~lucidppa) lucid; urgency=low
-
-  * fixed versioning
-  * recompile for php5-easybib 5.3.24
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 24 Apr 2013 14:23:09 +0200
