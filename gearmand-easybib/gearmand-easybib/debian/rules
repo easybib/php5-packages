@@ -15,7 +15,7 @@ export DH_VERBOSE=1
 
 INSTALL_PREFIX=/opt/gearman
 
-CONFIG_OPTS=--disable-libdrizzle --disable-libmemcached --disable-libpq --disable-libtokyocabinet --disable-hiredis --prefix=$(INSTALL_PREFIX)
+CONFIG_OPTS=--mandir=/usr/share/man --disable-libdrizzle --disable-libmemcached --disable-libpq --disable-libtokyocabinet --disable-hiredis --prefix=$(INSTALL_PREFIX)
 
 %:
 	dh $@

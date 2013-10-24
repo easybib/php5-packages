@@ -4,21 +4,9 @@ set -e
 
 GROUP="gearmand"
 USER="gearmand"
-#FIXME: Not sure about this one:
-DATADIR="/opt/gearman/var/lib/gearmand"
-#FIXME, this should be done nicer - I hate the hardcoded version number
-LOGDIR="/opt/gearman/1.1.9/var/log"
+DATADIR="/var/lib/gearmand"
+LOGDIR="/var/log/gearmand"
 RUNDIR="/var/run/gearmand"
-
-# shamelessly copied from debian mysql-server + gearmand package...
-#
-# Now we have to ensure the following state: (100, 101 are examples)
-# /etc/passwd: gearman:x:100:101:Gearman Job Server:/var/lib/gearman:/bin/false
-# /etc/group:  gearman:x:101:
-#
-# Sadly there could any state be present on the system so we have to
-# modify everything carefully i.e. not doing a chown before creating
-# the user etc...
 
 # creating gearman group if he isn't already there
 if ! getent group $GROUP >/dev/null ; then
@@ -47,7 +35,6 @@ else
                 usermod -d $DATADIR $USER
         fi
 fi
-
 mkdir -p $LOGDIR && chown $USER.$GROUP $LOGDIR
 mkdir -p $RUNDIR && chown $USER.$GROUP $RUNDIR
 

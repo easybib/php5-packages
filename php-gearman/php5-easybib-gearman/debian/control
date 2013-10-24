@@ -1,6 +1,6 @@
 Source: php5-easybib-gearman
 Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
-Build-Depends: libtool, help2man, autoconf, automake, debhelper, php5-easybib, libgearman6, libevent-dev, uuid-dev, libgearman-dev
+Build-Depends: libtool, help2man, autoconf, automake, debhelper, php5-easybib, libgearman8-easybib, libevent-dev, uuid-dev
 Homepage: http://pecl.php.net/package/gearman
 Section: php
 Priority: optional
@@ -10,5 +10,5 @@ Package: php5-easybib-gearman
 Architecture: any
 Conflicts: php5-gearman
 Provides: php5-gearman
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libgearman6, libevent-1.4-2
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libgearman8-easybib, libevent-1.4-2
 Description: This package provides ext/gearman.so - 0.8.1

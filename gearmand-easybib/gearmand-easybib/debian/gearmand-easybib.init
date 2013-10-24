@@ -22,13 +22,14 @@
 ### END INIT INFO
 
 prefix=/opt/gearman
+LOGFILE=/var/log/gearmand/gearmand.log
 exec_prefix=${prefix}
-DAEMON=${exec_prefix}/sbin/gearmand
+DAEMON=${exec_prefix}/sbin/gearmand3
 NAME=gearmand-easybib
 PIDDIR=/var/run/$NAME
 PIDFILE=${PIDDIR}/$NAME.pid
 GEARMANUSER=gearmand
-PARAMS=""
+PARAMS="-l ${LOGFILE} "
 
 test -x ${DAEMON} || exit 0
 
