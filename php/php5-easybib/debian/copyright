@@ -1,8 +1,8 @@
 This work was packaged for Debian by:
 
-    fh <fh-ubuntu@fholzhauer.de> on Wed, 16 Feb 2011 10:59:20 -0800
+    fh <fh-ubuntu@fholzhauer.de> on Thu, 31 Oct 2013 09:00:01 +0200
 
-It was downloaded from <http://www.php.net/get/php-5.3.8.tar.gz/from/www.php.net/mirror>
+It was downloaded from <http://us2.php.net/get/php-5.5.5.tar.gz/from/de2.php.net/mirror>
 
 License:
 
@@ -10,5 +10,5 @@ License:
 
 The Debian packaging is:
 
-    Copyright (C) 2011 fh <fh-ubuntu@fholzhauer.de>
+    Copyright (C) 2013 fh <fh-ubuntu@fholzhauer.de>
 

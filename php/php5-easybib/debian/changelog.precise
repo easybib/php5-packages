@@ -1,32 +1,5 @@
-php5-easybib (5.3.27-1easybib1~preciseppa) precise; urgency=high
+php5-easybib (5.5.5-0easybib0~preciseppa) precise; urgency=low
 
-  * added zlib
+  * Hello PHP 5.5!
 
  -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 31 Oct 2013 12:34:56 +0200
-
-php5-easybib (5.3.27-1easybib0~preciseppa) precise; urgency=high
-
-  * php 5.3.27
-  * added ziparchive
-  * added xslt
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 31 Oct 2013 14:23:09 +0200
-
-php5-easybib (5.3.24-1easybib4~preciseppa) precise; urgency=high
-
-  * fixes missing symbol in pdo-sqlite 
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 11 Jul 2013 14:23:09 +0200
-
-php5-easybib (5.3.24-1easybib3~preciseppa) precise; urgency=low
-
-  * fixes pdo-sqlite
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 05 Jul 2013 07:00:09 +0200
-
-php5-easybib (5.3.24-1easybib2~preciseppa) precise; urgency=low
-
-  * forgot to add enchant deps to control
-  * hello precise
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 08 May 2013 07:00:09 +0200
