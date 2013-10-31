@@ -1,15 +1,26 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant::Config.run do |config|
-  config.vm.box = "precise"
-  config.vm.box_url = "http://dl.dropbox.com/u/1537815/precise64.box"
+
+Vagrant.configure("2") do |config|
+  config.vm.box      = "easybib-ubuntu-12.04.3_vbox-4.3.0_chef-11.4.4_0.1"
+  config.vm.box_url  = "https://s3.amazonaws.com/easybibdeployment/easybib-ubuntu-12.04.3_vbox-4.3.0_chef-11.4.4_0.1"
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
+  
+  vagrant_boxname    = "Package Builder Box"
+  vagrant_memorysize = "1024"
+
+  config.vm.provider :virtualbox do |vb|
+     vb.gui = false
+     vb.customize [
+             "modifyvm", :id,
+             "--name",   vagrant_boxname,
+             "--memory", vagrant_memorysize
+     ]
+  end
 
   config.vm.provision :shell, :path => "./scripts/setup.sh"
-  
-#  config.vm.share_folder("v-gnupg", "/home/vagrant/.gnupg", "./gnupg", :nfs => false)
-  config.vm.share_folder("vagrant-root", "/packaging", "..", :nfs => false)
+  config.vm.synced_folder "./../", "/packaging", :owner => "vagrant", :nfs => false
   
 end

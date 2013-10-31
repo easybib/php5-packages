@@ -1,6 +1,6 @@
 Source: php5-easybib
 Maintainer: Ulf Härnhammar <ulfharn@gmail.com>
-Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libpspell-dev, libtidy-dev, libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, quilt, libenchant1c2a, libenchant-dev, libglib2.0-dev
+Build-Depends: libevent-dev, openssl, libssl-dev, libcurl4-openssl-dev, libpspell-dev, libtidy-dev, libxml2-dev, libmysqlclient-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, quilt, libenchant1c2a, libenchant-dev, libglib2.0-dev, libxslt1-dev
 Homepage: http://www.php.net/
 Section: php
 Priority: optional
@@ -68,3 +68,10 @@ Conflicts: php5-sqlite3
 Provides: php5-sqlite3
 Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
 Description: sqlite3
+
+Package: php5-easybib-xsl
+Architecture: any
+Conflicts: php5-xsl
+Provides: php5-xsl
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version}), libxml2, libxslt1.1
+Description: xsl

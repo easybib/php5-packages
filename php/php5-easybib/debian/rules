@@ -35,6 +35,7 @@ PHP_EXTS=--enable-sockets\
   --enable-pcntl\
   --with-curl\
   --with-tidy \
+  --enable-zip \
   --enable-pdo \
   --with-pdo-mysql \
   --without-pdo-sqlite \
@@ -44,6 +45,7 @@ PHP_EXTS=--enable-sockets\
   --with-pspell=shared \
   --with-sqlite3=shared \
   --with-pdo-sqlite=shared \
+  --with-xsl=shared \
   --with-enchant=shared
 
 PHP_FPM=--enable-fpm\
