@@ -46,6 +46,7 @@ PHP_EXTS=--enable-sockets\
   --with-sqlite3=shared \
   --with-pdo-sqlite=shared \
   --with-xsl=shared \
+  --with-zlib=shared \
   --with-enchant=shared
 
 PHP_FPM=--enable-fpm\

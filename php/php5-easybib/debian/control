@@ -75,3 +75,10 @@ Conflicts: php5-xsl
 Provides: php5-xsl
 Depends: ${misc:Depends}, php5-easybib (= ${binary:Version}), libxml2, libxslt1.1
 Description: xsl
+
+Package: php5-easybib-zlib
+Architecture: any
+Conflicts: php5-zlib
+Provides: php5-zlib
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: zlib

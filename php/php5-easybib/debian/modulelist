@@ -6,3 +6,4 @@ pspell
 pdo-sqlite pdo_sqlite pdo_sqlite
 sqlite3
 xsl
+zlib
