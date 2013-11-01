@@ -79,6 +79,7 @@ Description: xsl
 Package: php5-easybib-zlib
 Architecture: any
 Conflicts: php5-zlib
+Recommends: php5-easybib-zip
 Provides: php5-zlib
 Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
 Description: zlib

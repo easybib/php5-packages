@@ -35,7 +35,6 @@ PHP_EXTS=--enable-sockets\
   --enable-pcntl\
   --with-curl\
   --with-tidy \
-  --enable-zip \
   --enable-pdo \
   --with-pdo-mysql \
   --without-pdo-sqlite \
