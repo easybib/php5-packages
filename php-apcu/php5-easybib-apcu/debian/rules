@@ -3,9 +3,9 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
-PACKAGE_NAME=php5-easybib-apc
-PECL_PKG_NAME=apc
-PECL_PKG_REALNAME=APC
+PACKAGE_NAME=php5-easybib-apcu
+PECL_PKG_NAME=apcu
+PECL_PKG_REALNAME=apcu
 PHP_PREFIX=/opt/easybib
 PHPCONFIG=$(PHP_PREFIX)/bin/php-config
 PHPIZE=$(PHP_PREFIX)/bin/phpize
@@ -63,10 +63,7 @@ override_dh_auto_install:
 	touch TODO
 	touch CHANGELOG
 	touch build_stamp
-	#mkdir -p $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)
-	#echo "extension=apc.so" > $(CURDIR)/debian/php5-easybib-apc/$(INIDIR)/apc.ini
 	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
-	#CFLAGS="$(CFLAGS)" $(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
 	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
 	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
 	echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini

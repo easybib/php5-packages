@@ -1,0 +1,6 @@
+php5-easybib-apcu (4.0.2-0easybib0~preciseppa) precise; urgency=medium
+
+  * apcu 4.0.2
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 04 Nov 2013 10:11:12 +0200
+ 

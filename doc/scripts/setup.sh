@@ -35,7 +35,7 @@ UBUNTU_MIRROR="de.archive.ubuntu.com"
 
 NAME="$DIST"
 #include easybib-ppa in mirrors list to build with dependencies to php5-easybib packages
-OTHERMIRROR="deb [trusted=yes] http://ppa.launchpad.net/easybib/test-opt/ubuntu $DIST main"
+OTHERMIRROR="deb [trusted=yes] http://ppa.launchpad.net/easybib/php55/ubuntu $DIST main"
 # OTHERMIRROR="deb http://ppa.launchpad.net/easybib/ppa/ubuntu $DIST main"
 
 if [ -n "${ARCH}" ]; then
