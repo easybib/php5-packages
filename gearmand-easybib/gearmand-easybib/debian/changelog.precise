@@ -1,3 +1,9 @@
+gearmand-easybib (1.1.11-0easybib0~preciseppa) precise; urgency=medium
+
+  * Gearmand 1.1.11
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Fri, 04 Nov 2013 10:11:12 +0200
+
 gearmand-easybib (1.1.9-0easybib4~preciseppa) precise; urgency=low
 
   * Logfile now /var/log/gearmand/*

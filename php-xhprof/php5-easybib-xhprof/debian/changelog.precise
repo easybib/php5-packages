@@ -1,3 +1,9 @@
+php5-easybib-xhprof (0.9.4-0easybib0~preciseppa) precise; urgency=low
+
+  * xhprof 0.9.4
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 04 Nov 2013 14:23:09 +0200
+
 php5-easybib-xhprof (0.9.2-0easybib0~preciseppa) precise; urgency=low
 
   * hello precise
