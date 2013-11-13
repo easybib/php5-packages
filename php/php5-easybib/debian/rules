@@ -42,6 +42,7 @@ PHP_EXTS=--enable-sockets\
   --enable-mbstring=shared \
   --enable-phar=shared \
   --enable-posix=shared \
+  --enable-opcache \
   --with-pspell=shared \
   --with-sqlite3=shared \
   --with-pdo-sqlite=shared \

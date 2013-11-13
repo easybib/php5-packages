@@ -2,6 +2,7 @@ enchant
 mbstring
 phar
 posix
+opcache
 pspell
 pdo-sqlite pdo_sqlite pdo_sqlite
 sqlite3

@@ -34,6 +34,13 @@ Provides: php5-enchant
 Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
 Description: enchant
 
+Package: php5-easybib-opcache
+Architecture: any
+Conflicts: php5-opcache
+Provides: php5-opcache
+Depends: ${misc:Depends}, php5-easybib (= ${binary:Version})
+Description: php5.5 opcache
+
 Package: php5-easybib-phar
 Architecture: any
 Conflicts: php5-phar
