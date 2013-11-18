@@ -1,0 +1,14 @@
+Source: php5-easybib-opcache-zend
+Maintainer: Till Klampaeckel <till@php.net>
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib, libicu-dev
+Section: php
+Priority: optional
+Homepage: https://github.com/zendtech/ZendOptimizerPlus
+Standards-Version: 3.0.0
+
+Package: php5-easybib-opcache-zend
+Architecture: any
+Conflicts: php5-easybib-opcache
+Provides: php5-easybib-opcache
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu42 | libicu48
+Description: https://github.com/zendtech/ZendOptimizerPlus
