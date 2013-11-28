@@ -93,10 +93,11 @@ override_dh_auto_configure:
 
 #
 # format for modulelist file:
-# package extname dsoname priority
+# package extname dsoname extprefix priority
 # package: name of the ubuntupackage
 # extname (optional): name of the extension, used for ini-file generation only. default: package
 # dsoname (optional): actual name of the .so file to be copied. default: package
+# extprefix (optional): prefix for extension=, usually "zend" if set. default: none
 # priority (optional): if set: prepended to the ini-file-name. default: none
 # 
 
@@ -105,19 +106,19 @@ override_dh_auto_install:
 	cd $(CURDIR)/debian/php5-easybib; \
 	rm -rf .channels .depdb .depdblock .filemap .lock .registry; \
 	ext=`$(CURDIR)/debian/php5-easybib/$(PHP_PREFIX)/bin/php-config --extension-dir`; \
-	cat $(CURDIR)/debian/modulelist | while read package extname dsoname priority; do \
+	cat $(CURDIR)/debian/modulelist | while read package extname dsoname extprefix priority; do \
 		echo "Building package $$package:" ;\
 		modulepath=$(CURDIR)/debian/php5-easybib/$$ext; \
 		if [ -z "$$dsoname" ]; then dsoname=$$package; fi; \
 		if [ -n "$$priority" ]; then prepend="$$priority-"; else prepend=""; fi; \
-		echo "dsoname is $$dsoname.so, going to copy $$modulepath/$$dsoname.so to $(CURDIR)/debian/php5-easybib-$$package$$ext/$$dsoname.so" ;\
+		echo "dsoname is $$dsoname.so, expref is $$extprefix, going to copy $$modulepath/$$dsoname.so to $(CURDIR)/debian/php5-easybib-$$package$$ext/$$dsoname.so" ;\
 		mkdir -p $(CURDIR)/debian/php5-easybib-$$package$$ext; \
 		install -m 644 -o root -g root \
 			$$modulepath/$$dsoname.so \
 			$(CURDIR)/debian/php5-easybib-$$package$$ext/$$dsoname.so; \
 		rm $(CURDIR)/debian/php5-easybib$$ext/$$dsoname.*; \
 		mkdir -p $(CURDIR)/debian/php5-easybib-$$package/$(PHP_SCANDIR); \
-		sed -e"s/@extname@/$$extname/g; s/@dsoname@/$$dsoname/g" \
+		sed -e"s/@extname@/$$extname/g; s/@extprefix@/$$extprefix/g; s/@dsoname@/$$dsoname/g" \
 		  < $(CURDIR)/debian/php5-module.ini \
 		  > $(CURDIR)/debian/php5-easybib-$$package/$(PHP_SCANDIR)/$$prepend$$dsoname.ini; \
 		echo "Content prepared for package $$package:" ;\
