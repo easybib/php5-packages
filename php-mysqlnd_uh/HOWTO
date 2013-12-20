@@ -1,0 +1,8 @@
+svn co http://svn.php.net/repository/pecl/mysqlnd_uh/trunk
+rm -rf trunk/.svn
+mv trunk  php5-easybib-mysqlnd-uh_0.1.0a1-$REV
+tar cfz php5-easybib-mysqlnd-uh_0.1.0a1-$REV.orig.tar.gz php5-easybib-mysqlnd-uh_0.1.0a1-$REV
+cd php5-easybib-mysqlnd-uh/debian
+vim changelog
+cp changelog changelog.precise
+debuild -S -sa
