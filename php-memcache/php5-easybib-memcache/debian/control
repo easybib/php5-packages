@@ -1,7 +1,7 @@
 Source: php5-easybib-memcache
 Maintainer: Florian Holzhauer <fh-ubuntu@fholzhauer.de> 
 Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib
-Homepage: http://www.php.net/
+Homepage: http://pecl.php.net/package/memcache
 Section: php
 Priority: optional
 Standards-Version: 3.8.3 
