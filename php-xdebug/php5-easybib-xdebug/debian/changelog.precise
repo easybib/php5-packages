@@ -1,0 +1,11 @@
+php5-easybib-xdebug (2.2.3-0easybib1~preciseppa) precise; urgency=low
+
+  * use zend_extension
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Sun, 02 Feb 2014 09:15:00 +0200
+ 
+php5-easybib-xdebug (2.2.3-0easybib0~preciseppa) precise; urgency=low
+
+  * hello precise
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Sat, 01 Feb 2014 18:15:00 +0200
