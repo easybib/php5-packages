@@ -2,7 +2,7 @@ This work was packaged for Debian by:
 
    Till Klampaeckel <till@php.net> on Fri, 21 Jun 2013 18:15:00 +0200
 
-It was downloaded from <http://pecl.php.net/package/intl>
+It was downloaded from <https://github.com/easybiblabs/php-poppler-pdf>
 
 License:
 
@@ -10,4 +10,4 @@ License:
 
 The Debian packaging is:
 
-    Copyright (C) 2012 Ulf Härnhammar <ulfharn@gmail.com>
+    Copyright (C) 2014 Florian Holzhauer <fh-hellothere@fholzhauer.de>
