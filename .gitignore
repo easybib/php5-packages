@@ -1,3 +1,4 @@
+doc/.gnupg
 .DS_Store
 *.debian.tar.gz
 *.diff.gz
