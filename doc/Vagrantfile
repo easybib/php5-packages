@@ -3,8 +3,8 @@
 
 
 Vagrant.configure("2") do |config|
-  config.vm.box      = "easybib-ubuntu-12.04.3_vbox-4.3.0_chef-11.4.4_0.1"
-  config.vm.box_url  = "https://s3.amazonaws.com/easybibdeployment/easybib-ubuntu-12.04.3_vbox-4.3.0_chef-11.4.4_0.1"
+  config.vm.box      = "easybib-ubuntu-12.04.4_vbox-4.3.6_chef-11.4.4_0.1"
+  config.vm.box_url  = "https://s3.amazonaws.com/easybibdeployment/easybib-ubuntu-12.04.4_vbox-4.3.6_chef-11.4.4_0.1"
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
   
