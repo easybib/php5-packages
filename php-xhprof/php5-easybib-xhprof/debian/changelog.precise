@@ -1,3 +1,16 @@
+php5-easybib-xhprof (0.9.4-0easybib2~preciseppa) precise; urgency=high
+
+  * built against php 5.5.13
+  * patch for 5.5.* crashes (https://github.com/phacility/xhprof/pull/33)
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Fri, 20 Jun 2014 14:23:09 +0200
+
+php5-easybib-xhprof (0.9.4-0easybib1~preciseppa) precise; urgency=low
+
+  * bump for php 5.5.12
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Fri, 20 Jun 2014 14:23:09 +0200
+
 php5-easybib-xhprof (0.9.4-0easybib0~preciseppa) precise; urgency=low
 
   * xhprof 0.9.4
