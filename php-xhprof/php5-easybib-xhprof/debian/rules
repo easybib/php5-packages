@@ -66,7 +66,8 @@ override_dh_auto_install:
 	mkdir -p $(CURDIR)/debian/$(PACKAGE_NAME)/$(EXTDIR)
 	install -m 644 -o root -g root $(CURDIR)/debian/tmp/modules/$(PECL_PKG_NAME).so debian/$(PACKAGE_NAME)/$(EXTDIR)/$(PECL_PKG_NAME).so
 	mkdir -p debian/$(PACKAGE_NAME)/$(INIDIR); \
-        echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
+	echo "extension=$(PECL_PKG_NAME).so" > debian/$(PACKAGE_NAME)/$(INIDIR)/$(PECL_PKG_NAME).ini
+	echo "php:Depends=phpapi-`php-config5 --phpapi`" >> debian/php5-xhprof.substvars
 
 override_dh_auto_test:
 	#noop
