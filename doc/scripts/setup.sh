@@ -25,7 +25,7 @@ apt-get install -y git-core gnupg vim
 cat << 'EOF' >/home/vagrant/.pbuilderrc
 AUTO_DEBSIGN=yes
 
-UBUNTU_SUITES=("precise" "maverick" "lucid" "karmic" "jaunty" "hardy")
+UBUNTU_SUITES=("trusty" "precise" "lucid")
 UBUNTU_MIRROR="de.archive.ubuntu.com"
 
 # precise falls keine Angabe verwendet wird
@@ -82,4 +82,4 @@ su -c "mkdir ~/.gnupg && cp /packaging/doc/gnupg/* ~/.gnupg" vagrant
 
 echo " *********************************************** "
 echo " * Do not forget to run 'sudo pbuilder create' for all ARCH and DIST you want to use with pdebuild"
-echo " * e.g. 'sudo DIST=precise ARCH=i386 pbuilder create'"
+echo " * e.g. 'sudo DIST=trusty ARCH=amd64 pbuilder create'"
