@@ -1,0 +1,5 @@
+php5-easybib-memcache (3.0.8-0easybib0~trustyppa) trusty; urgency=low
+
+  * hello trusty
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Sun, 27 Jul 2014 10:11:12 +0200
