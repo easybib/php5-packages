@@ -1,3 +1,9 @@
+php5-easybib-xdebug (2.2.5-0easybib0~preciseppa) precise; urgency=medium
+
+  * xdebug 2.2.5 bugfix release
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Sun, 27 Jul 2014 10:11:12 +0200
+
 php5-easybib-xdebug (2.2.3-0easybib1~preciseppa) precise; urgency=low
 
   * use zend_extension

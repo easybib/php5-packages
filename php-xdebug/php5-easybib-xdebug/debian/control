@@ -10,5 +10,5 @@ Package: php5-easybib-xdebug
 Architecture: any
 Conflicts: php5-xdebug
 Provides: php5-xdebug
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu42 | libicu48
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu42 | libicu48 | libicu52
 Description: ext/xdebug
