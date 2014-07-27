@@ -10,5 +10,5 @@ Package: php5-easybib-intl
 Architecture: any
 Conflicts: php5-intl
 Provides: php5-intl
-Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu42 | libicu48
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, libicu42 | libicu48 | libicu52
 Description: ext/intl
