@@ -2,7 +2,7 @@ Source: gearmand-easybib
 Section: misc
 Priority: optional
 Maintainer: Florian Holzhauer <fh-launchpadpackages@fholzhauer.de>
-Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libevent-dev, uuid-dev, libboost-dev, libboost-program-options-dev, libboost-thread-dev, libboost-all-dev, gperf, libcloog-ppl0
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev, libevent-dev, uuid-dev, libboost-dev, libboost-program-options-dev, libboost-thread-dev, libboost-all-dev, gperf, libcloog-ppl0 | libcloog-ppl1
 Standards-Version: 3.9.3
 Homepage: http://gearman.org/
 
