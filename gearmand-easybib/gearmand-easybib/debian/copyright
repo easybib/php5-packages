@@ -1,7 +1,0 @@
-Format: http://dep.debian.net/deps/dep5
-Upstream-Name: gearmand-easybib
-Source: <http://gearman.org/>
-
-Files: *
-Copyright: 2012 gearman.org
-License: Simplified BSD license

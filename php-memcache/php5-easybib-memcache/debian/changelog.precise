@@ -1,7 +1,0 @@
-php5-easybib-memcache (3.0.8-0easybib0~preciseppa) precise; urgency=low
-
-  * hello precise
-  * fixed versioning
-  * upgraded to 3.0.8
-
- -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 15 Apr 2013 09:41:35 +0200
