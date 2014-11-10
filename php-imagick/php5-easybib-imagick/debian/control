@@ -1,0 +1,14 @@
+Source: php5-easybib-imagick
+Maintainer: Till Klampaeckel <till@php.net>
+Build-Depends: libevent-dev, bison, re2c, libtool, help2man, autoconf, automake, debhelper, php5-easybib, libmagickwand-dev, imagemagick
+Homepage: http://www.php.net/
+Section: php
+Priority: optional
+Standards-Version: 3.8.3
+
+Package: php5-easybib-imagick
+Architecture: any
+Conflicts: php5-imagick
+Provides: php5-imagick
+Depends: ${misc:Depends}, sed (>= 4.1.1-1), php5-easybib, imagemagick, libmagickwand-dev
+Description: This package provides imagemagick for php

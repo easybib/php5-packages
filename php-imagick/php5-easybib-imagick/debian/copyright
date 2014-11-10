@@ -1,0 +1,16 @@
+This work was packaged for Debian by:
+
+    Florian Holzhauer <fh-easybib@fholzhauer.de> on Tue, 28 Oct 2014 12:13:14 +0100
+
+It was downloaded from <http://pecl.php.net/get/imagick-3.1.2.tgz>
+
+License:
+
+    The PHP License v3.01, copyright (c) the PHP Group.
+
+The Debian packaging is:
+
+    Copyright (C) 2014 Florian Holzhauer <fh-easybib@fholzhauer.de>
+
+and is licensed under the GPL version 3,
+see `/usr/share/common-licenses/GPL-3'.

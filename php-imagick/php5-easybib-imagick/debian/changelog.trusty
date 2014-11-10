@@ -1,0 +1,5 @@
+php5-easybib-imagick (3.1.2-0easybib0~trustyppa) trusty; urgency=medium
+
+  * initial release
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Tue, 28 Oct 2014 10:11:12 +0200
