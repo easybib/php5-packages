@@ -1,3 +1,9 @@
+nginx (1.6.2-4+trusty2) trusty; urgency=high
+
+  * Bugfix: Add pushstream nginx to $FLAVORS in rules to have it actually being built
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 11 Dec 2014 12:34:31 -0400
+
 nginx (1.6.2-4+trusty1) trusty; urgency=high
 
   * Add http-push-stream
