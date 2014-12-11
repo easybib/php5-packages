@@ -1,1 +1,1 @@
-debian/build-full/objs/nginx usr/sbin
+debian/build-pushstream/objs/nginx usr/sbin

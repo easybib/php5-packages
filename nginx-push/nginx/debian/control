@@ -158,7 +158,7 @@ Package: nginx-pushstream-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: nginx-full (= ${binary:Version}), ${misc:Depends}
+Depends: nginx-pushstream (= ${binary:Version}), ${misc:Depends}
 Conflicts: nginx-extras-dbg, nginx-light-dbg, nginx-full-dbg
 Description: nginx web/proxy server (standard version) - debugging symbols
  Nginx ("engine X") is a high-performance web and reverse proxy server
