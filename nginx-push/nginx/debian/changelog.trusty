@@ -1,3 +1,9 @@
+nginx (1.6.2-4+trusty3) trusty; urgency=high
+
+  * Bugfix: Removed copypaste error resulting in wrong nginx-pushstream package
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Thu, 11 Dec 2014 12:34:31 -0400
+
 nginx (1.6.2-4+trusty2) trusty; urgency=high
 
   * Bugfix: Add pushstream nginx to $FLAVORS in rules to have it actually being built
