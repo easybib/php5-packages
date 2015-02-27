@@ -1,3 +1,22 @@
+php5-easybib-xdebug (2.3.1-0easybib0~trustyppa) trusty; urgency=medium
+
+  * xdebug 2.3.1
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Wed, 25 Feb 2015 12:13:14 +0200
+
+php5-easybib-xdebug (2.3.0.1-0easybib0~trustyppa) trusty; urgency=medium
+
+  * Bugfix below obviously introduced a new tarball, so launchpad is rejecting the 
+    upload. Creating fake version 2.3.0.1 with new 2.3.0 tarball.
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 23 Feb 2015 12:13:14 +0200
+
+php5-easybib-xdebug (2.3.0-0easybib1~trustyppa) trusty; urgency=medium
+
+  * Bugfix: http://bugs.xdebug.org/view.php?id=1114
+
+ -- Florian Holzhauer (For packaging only, do not use for mail) <fh-launchpadpackages@fholzhauer.de>  Mon, 23 Feb 2015 12:13:14 +0200
+
 php5-easybib-xdebug (2.3.0-0easybib0~trustyppa) trusty; urgency=medium
 
   * xdebug 2.3.0
