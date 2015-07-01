@@ -15,20 +15,20 @@ fi
 # install packages
 
 apt-get update -y
-apt-get install -y python-software-properties
+apt-get install -y software-properties-common
 add-apt-repository ppa:easybib/php56
-apt-get install -y build-essential devscripts ubuntu-dev-tools debhelper dh-make diff patch cdbs quilt gnupg fakeroot lintian pbuilder piuparts ccache 
+apt-get install -y build-essential devscripts ubuntu-dev-tools debhelper dh-make diffutils patch cdbs quilt gnupg fakeroot lintian pbuilder piuparts ccache dh-systemd
 apt-get install -y git-core gnupg vim
 
 ####begin pbuilderrc
 cat << 'EOF' >/home/vagrant/.pbuilderrc
 AUTO_DEBSIGN=yes
 
-UBUNTU_SUITES=("trusty" "precise" "lucid")
+UBUNTU_SUITES=("trusty")
 UBUNTU_MIRROR="de.archive.ubuntu.com"
 
 # precise falls keine Angabe verwendet wird
-: ${DIST:="precise"}
+: ${DIST:="trusty"}
 # Architektur amd64 setzen, falls keine angegeben ist
 : ${ARCH:="amd64"}
 
@@ -72,8 +72,6 @@ EOF
 chmod a+x /home/vagrant/pbuilder/hooks/D05deps
 
 mkdir -p /home/vagrant/pbuilder/build
-mkdir -p /home/vagrant/pbuilder/lucid-i386
-mkdir -p /home/vagrant/pbuilder/lucid-amd64
 
 chown -R vagrant /home/vagrant/pbuilder
 
