@@ -16,8 +16,7 @@ fi
 
 apt-get update -y
 apt-get install -y python-software-properties
-add-apt-repository ppa:easybib/ppa
-add-apt-repository ppa:easybib/test
+add-apt-repository ppa:easybib/php56
 apt-get install -y build-essential devscripts ubuntu-dev-tools debhelper dh-make diff patch cdbs quilt gnupg fakeroot lintian pbuilder piuparts ccache 
 apt-get install -y git-core gnupg vim
 
@@ -35,7 +34,7 @@ UBUNTU_MIRROR="de.archive.ubuntu.com"
 
 NAME="$DIST"
 #include easybib-ppa in mirrors list to build with dependencies to php5-easybib packages
-OTHERMIRROR="deb [trusted=yes] http://ppa.launchpad.net/easybib/php55/ubuntu $DIST main"
+OTHERMIRROR="deb [trusted=yes] http://ppa.launchpad.net/easybib/php56/ubuntu $DIST main"
 # OTHERMIRROR="deb http://ppa.launchpad.net/easybib/ppa/ubuntu $DIST main"
 
 if [ -n "${ARCH}" ]; then
